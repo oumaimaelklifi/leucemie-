@@ -1,0 +1,1001 @@
+﻿ID Patient,Sexe,Groupe d'âge,Environnement,Type de leucémie,Tabagisme,Facteur génétique
+P0001,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0002,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0003,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0004,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0005,Homme,[60-69],Urbain,Myéloïde,Non fumeur,Oui
+P0006,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0007,Homme,[0-9],Urbain,Myéloïde,Fumeur,Non
+P0008,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0009,Homme,[10-19],Rural,Lymphoïde,Non fumeur,Non
+P0010,Femme,70+,Urbain,Myéloïde,Fumeur,Non
+P0011,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0012,Homme,[60-69],Urbain,Non spécifiée,Non fumeur,Non
+P0013,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0014,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0015,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0016,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0017,Homme,[30-39],Urbain,Myéloïde,Fumeur,Non
+P0018,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0019,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0020,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0021,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0022,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0023,Homme,[20-29],Rural,Myéloïde,Non fumeur,Non
+P0024,Homme,70+,Rural,Myéloïde,Non fumeur,Non
+P0025,Homme,[0-9],Urbain,Myéloïde,Fumeur,Non
+P0026,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0027,Femme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0028,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0029,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0030,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0031,Homme,[0-9],Rural,Lymphoïde,Non fumeur,Non
+P0032,Femme,[40-49],Urbain,Myéloïde,Fumeur,Non
+P0033,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0034,Femme,[60-69],Urbain,Myéloïde,Fumeur,Non
+P0035,Femme,[0-9],Urbain,Lymphoïde,Fumeur,Non
+P0036,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0037,Homme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0038,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0039,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0040,Homme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0041,Femme,70+,Urbain,Myéloïde,Fumeur,Non
+P0042,Homme,70+,Rural,Lymphoïde,Non fumeur,Non
+P0043,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0044,Femme,[0-9],Urbain,Non spécifiée,Fumeur,Non
+P0045,Femme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0046,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0047,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0048,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0049,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0050,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0051,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0052,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0053,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0054,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0055,Femme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0056,Homme,[60-69],Urbain,Myéloïde,Fumeur,Oui
+P0057,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0058,Homme,[30-39],Urbain,Lymphoïde,Non fumeur,Oui
+P0059,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0060,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0061,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0062,Femme,70+,Urbain,Myéloïde,Fumeur,Oui
+P0063,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Oui
+P0064,Femme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0065,Femme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0066,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0067,Femme,[30-39],Urbain,Lymphoïde,Fumeur,Non
+P0068,Homme,70+,Urbain,Lymphoïde,Non fumeur,Oui
+P0069,Femme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0070,Femme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0071,Femme,[60-69],Urbain,Myéloïde,Fumeur,Non
+P0072,Homme,70+,Urbain,Myéloïde,Fumeur,Non
+P0073,Femme,[0-9],Urbain,Lymphoïde,Fumeur,Non
+P0074,Femme,[0-9],Urbain,Non spécifiée,Non fumeur,Non
+P0075,Femme,70+,Rural,Lymphoïde,Non fumeur,Non
+P0076,Femme,[40-49],Urbain,Lymphoïde,Fumeur,Non
+P0077,Homme,[30-39],Urbain,Myéloïde,Fumeur,Non
+P0078,Femme,[40-49],Rural,Myéloïde,Non fumeur,Non
+P0079,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0080,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0081,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0082,Homme,[20-29],Rural,Lymphoïde,Non fumeur,Non
+P0083,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0084,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0085,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0086,Femme,[30-39],Rural,Lymphoïde,Fumeur,Oui
+P0087,Homme,70+,Rural,Myéloïde,Non fumeur,Non
+P0088,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0089,Homme,70+,Urbain,Non spécifiée,Non fumeur,Non
+P0090,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0091,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0092,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0093,Homme,[40-49],Urbain,Myéloïde,Fumeur,Oui
+P0094,Femme,[50-59],Urbain,Myéloïde,Fumeur,Oui
+P0095,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0096,Homme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0097,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0098,Homme,[20-29],Urbain,Myéloïde,Fumeur,Non
+P0099,Homme,[10-19],Urbain,Lymphoïde,Fumeur,Non
+P0100,Femme,[30-39],Urbain,Myéloïde,Fumeur,Oui
+P0101,Homme,[20-29],Urbain,Myéloïde,Fumeur,Non
+P0102,Homme,[20-29],Urbain,Lymphoïde,Fumeur,Non
+P0103,Femme,[0-9],Urbain,Lymphoïde,Fumeur,Non
+P0104,Femme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0105,Femme,[20-29],Urbain,Lymphoïde,Fumeur,Non
+P0106,Femme,70+,Urbain,Myéloïde,Fumeur,Non
+P0107,Homme,[10-19],Urbain,Myéloïde,Fumeur,Non
+P0108,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0109,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0110,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0111,Homme,70+,Urbain,Myéloïde,Fumeur,Non
+P0112,Homme,[10-19],Urbain,Myéloïde,Fumeur,Non
+P0113,Homme,[40-49],Urbain,Non spécifiée,Fumeur,Non
+P0114,Femme,70+,Urbain,Myéloïde,Fumeur,Non
+P0115,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0116,Homme,[30-39],Urbain,Myéloïde,Fumeur,Non
+P0117,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0118,Homme,[10-19],Urbain,Non spécifiée,Non fumeur,Non
+P0119,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0120,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0121,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0122,Homme,[60-69],Urbain,Myéloïde,Fumeur,Non
+P0123,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0124,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0125,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0126,Homme,70+,Urbain,Myéloïde,Fumeur,Non
+P0127,Femme,[40-49],Urbain,Lymphoïde,Fumeur,Non
+P0128,Homme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0129,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0130,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0131,Femme,[40-49],Urbain,Myéloïde,Fumeur,Non
+P0132,Femme,[30-39],Urbain,Lymphoïde,Fumeur,Non
+P0133,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0134,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0135,Homme,[60-69],Rural,Lymphoïde,Non fumeur,Non
+P0136,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0137,Femme,[30-39],Urbain,Myéloïde,Non fumeur,Oui
+P0138,Homme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0139,Femme,[30-39],Urbain,Myéloïde,Fumeur,Non
+P0140,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0141,Homme,[50-59],Urbain,Lymphoïde,Fumeur,Non
+P0142,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0143,Homme,70+,Urbain,Myéloïde,Fumeur,Non
+P0144,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0145,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0146,Homme,[10-19],Urbain,Myéloïde,Fumeur,Non
+P0147,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0148,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0149,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0150,Femme,[10-19],Urbain,Lymphoïde,Fumeur,Non
+P0151,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0152,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0153,Femme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0154,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0155,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0156,Homme,70+,Rural,Myéloïde,Fumeur,Non
+P0157,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0158,Femme,70+,Urbain,Myéloïde,Fumeur,Non
+P0159,Femme,[50-59],Urbain,Lymphoïde,Fumeur,Non
+P0160,Homme,[20-29],Urbain,Myéloïde,Fumeur,Non
+P0161,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0162,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0163,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0164,Homme,[50-59],Urbain,Lymphoïde,Fumeur,Non
+P0165,Femme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0166,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0167,Femme,[10-19],Rural,Myéloïde,Fumeur,Non
+P0168,Femme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0169,Homme,[30-39],Urbain,Non spécifiée,Non fumeur,Oui
+P0170,Femme,70+,Urbain,Myéloïde,Non fumeur,Oui
+P0171,Femme,[20-29],Rural,Lymphoïde,Non fumeur,Non
+P0172,Femme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0173,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0174,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0175,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Oui
+P0176,Femme,[40-49],Rural,Lymphoïde,Non fumeur,Non
+P0177,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0178,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0179,Homme,[20-29],Urbain,Myéloïde,Fumeur,Oui
+P0180,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0181,Femme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0182,Femme,[10-19],Rural,Myéloïde,Non fumeur,Non
+P0183,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0184,Femme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0185,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0186,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0187,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0188,Femme,70+,Urbain,Myéloïde,Fumeur,Non
+P0189,Homme,[10-19],Urbain,Myéloïde,Fumeur,Non
+P0190,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0191,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0192,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0193,Femme,[50-59],Urbain,Lymphoïde,Fumeur,Non
+P0194,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0195,Homme,70+,Urbain,Myéloïde,Fumeur,Non
+P0196,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0197,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0198,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0199,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0200,Homme,70+,Rural,Lymphoïde,Non fumeur,Non
+P0201,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0202,Femme,[30-39],Urbain,Non spécifiée,Non fumeur,Non
+P0203,Homme,[60-69],Urbain,Myéloïde,Fumeur,Non
+P0204,Femme,[10-19],Rural,Myéloïde,Non fumeur,Non
+P0205,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0206,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0207,Femme,[30-39],Rural,Myéloïde,Non fumeur,Non
+P0208,Femme,70+,Urbain,Lymphoïde,Fumeur,Oui
+P0209,Femme,[50-59],Urbain,Myéloïde,Fumeur,Non
+P0210,Femme,[30-39],Urbain,Myéloïde,Fumeur,Non
+P0211,Homme,[60-69],Urbain,Myéloïde,Fumeur,Non
+P0212,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0213,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0214,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Oui
+P0215,Homme,[40-49],Urbain,Myéloïde,Fumeur,Non
+P0216,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0217,Homme,[0-9],Urbain,Lymphoïde,Fumeur,Non
+P0218,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0219,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0220,Homme,[50-59],Urbain,Lymphoïde,Fumeur,Non
+P0221,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0222,Homme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0223,Homme,70+,Rural,Lymphoïde,Fumeur,Non
+P0224,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0225,Femme,[30-39],Urbain,Myéloïde,Non fumeur,Oui
+P0226,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0227,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0228,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0229,Homme,[10-19],Rural,Myéloïde,Non fumeur,Non
+P0230,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0231,Homme,[20-29],Rural,Myéloïde,Non fumeur,Non
+P0232,Femme,[10-19],Rural,Myéloïde,Non fumeur,Non
+P0233,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0234,Femme,[50-59],Urbain,Myéloïde,Fumeur,Non
+P0235,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0236,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0237,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0238,Homme,[10-19],Rural,Lymphoïde,Fumeur,Non
+P0239,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0240,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0241,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0242,Femme,70+,Rural,Lymphoïde,Non fumeur,Non
+P0243,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0244,Homme,[50-59],Urbain,Lymphoïde,Fumeur,Non
+P0245,Femme,[0-9],Rural,Myéloïde,Non fumeur,Non
+P0246,Femme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0247,Femme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0248,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0249,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0250,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0251,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0252,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0253,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0254,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0255,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0256,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0257,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0258,Femme,[10-19],Rural,Myéloïde,Non fumeur,Non
+P0259,Homme,[50-59],Rural,Lymphoïde,Non fumeur,Non
+P0260,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0261,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0262,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0263,Femme,70+,Urbain,Myéloïde,Fumeur,Non
+P0264,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0265,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0266,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0267,Homme,[0-9],Urbain,Lymphoïde,Fumeur,Non
+P0268,Homme,[20-29],Urbain,Myéloïde,Fumeur,Non
+P0269,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0270,Homme,[50-59],Rural,Lymphoïde,Non fumeur,Non
+P0271,Homme,[0-9],Urbain,Lymphoïde,Fumeur,Non
+P0272,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0273,Femme,[60-69],Rural,Myéloïde,Non fumeur,Non
+P0274,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0275,Homme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0276,Homme,[20-29],Urbain,Myéloïde,Fumeur,Non
+P0277,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0278,Femme,[30-39],Rural,Lymphoïde,Non fumeur,Non
+P0279,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0280,Femme,[20-29],Urbain,Myéloïde,Fumeur,Non
+P0281,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0282,Femme,[30-39],Urbain,Lymphoïde,Fumeur,Non
+P0283,Homme,[10-19],Urbain,Myéloïde,Fumeur,Non
+P0284,Femme,[40-49],Rural,Myéloïde,Non fumeur,Non
+P0285,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0286,Homme,[0-9],Urbain,Myéloïde,Fumeur,Non
+P0287,Homme,[50-59],Rural,Myéloïde,Fumeur,Non
+P0288,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0289,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0290,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0291,Femme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0292,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0293,Homme,[10-19],Rural,Lymphoïde,Non fumeur,Non
+P0294,Homme,[40-49],Urbain,Lymphoïde,Fumeur,Non
+P0295,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0296,Homme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0297,Femme,[30-39],Urbain,Lymphoïde,Fumeur,Non
+P0298,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0299,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0300,Homme,[0-9],Urbain,Myéloïde,Fumeur,Oui
+P0301,Femme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0302,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0303,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0304,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0305,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0306,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0307,Homme,[20-29],Rural,Myéloïde,Non fumeur,Non
+P0308,Homme,[50-59],Rural,Myéloïde,Fumeur,Non
+P0309,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0310,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0311,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0312,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0313,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0314,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0315,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0316,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0317,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Oui
+P0318,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0319,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0320,Homme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0321,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0322,Femme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0323,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0324,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0325,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0326,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0327,Femme,[30-39],Urbain,Lymphoïde,Fumeur,Non
+P0328,Femme,[20-29],Urbain,Lymphoïde,Fumeur,Non
+P0329,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0330,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0331,Homme,[60-69],Urbain,Myéloïde,Fumeur,Non
+P0332,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0333,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0334,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0335,Homme,[60-69],Urbain,Lymphoïde,Fumeur,Non
+P0336,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0337,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0338,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0339,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0340,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0341,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0342,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0343,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0344,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0345,Homme,[60-69],Urbain,Myéloïde,Fumeur,Non
+P0346,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0347,Homme,[30-39],Rural,Lymphoïde,Fumeur,Non
+P0348,Homme,70+,Urbain,Myéloïde,Fumeur,Non
+P0349,Femme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0350,Homme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0351,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0352,Femme,70+,Urbain,Non spécifiée,Fumeur,Non
+P0353,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0354,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0355,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0356,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0357,Homme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0358,Femme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0359,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0360,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0361,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0362,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0363,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0364,Femme,[40-49],Urbain,Myéloïde,Fumeur,Non
+P0365,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0366,Homme,70+,Urbain,Myéloïde,Fumeur,Non
+P0367,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0368,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0369,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0370,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0371,Femme,[40-49],Urbain,Myéloïde,Fumeur,Non
+P0372,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Oui
+P0373,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0374,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0375,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0376,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0377,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0378,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0379,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0380,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0381,Homme,[20-29],Urbain,Myéloïde,Fumeur,Non
+P0382,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0383,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Oui
+P0384,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0385,Femme,[30-39],Urbain,Lymphoïde,Fumeur,Non
+P0386,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0387,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0388,Femme,[20-29],Urbain,Lymphoïde,Non fumeur,Oui
+P0389,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0390,Homme,[20-29],Urbain,Myéloïde,Fumeur,Non
+P0391,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0392,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0393,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0394,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0395,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0396,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0397,Homme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0398,Femme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0399,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0400,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0401,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0402,Homme,[10-19],Rural,Myéloïde,Non fumeur,Non
+P0403,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Oui
+P0404,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0405,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0406,Femme,70+,Rural,Myéloïde,Non fumeur,Non
+P0407,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0408,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0409,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0410,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0411,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0412,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0413,Femme,[60-69],Urbain,Lymphoïde,Fumeur,Non
+P0414,Homme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0415,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0416,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0417,Femme,70+,Rural,Myéloïde,Non fumeur,Non
+P0418,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0419,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0420,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0421,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0422,Homme,70+,Urbain,Non spécifiée,Non fumeur,Non
+P0423,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0424,Femme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0425,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0426,Homme,[0-9],Urbain,Lymphoïde,Fumeur,Non
+P0427,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0428,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0429,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0430,Homme,[50-59],Rural,Lymphoïde,Non fumeur,Non
+P0431,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0432,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0433,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0434,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0435,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0436,Femme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0437,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0438,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0439,Homme,[20-29],Urbain,Lymphoïde,Fumeur,Non
+P0440,Femme,[50-59],Rural,Lymphoïde,Non fumeur,Non
+P0441,Homme,[0-9],Urbain,Lymphoïde,Fumeur,Non
+P0442,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0443,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0444,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0445,Femme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0446,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0447,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0448,Homme,[20-29],Urbain,Myéloïde,Fumeur,Non
+P0449,Homme,[30-39],Urbain,Lymphoïde,Fumeur,Non
+P0450,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0451,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0452,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0453,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0454,Femme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0455,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0456,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0457,Femme,[40-49],Rural,Myéloïde,Non fumeur,Non
+P0458,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0459,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0460,Femme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0461,Homme,[0-9],Urbain,Myéloïde,Fumeur,Non
+P0462,Homme,[10-19],Urbain,Lymphoïde,Fumeur,Non
+P0463,Femme,[30-39],Urbain,Myéloïde,Fumeur,Non
+P0464,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0465,Femme,[10-19],Rural,Myéloïde,Non fumeur,Non
+P0466,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0467,Homme,[50-59],Rural,Myéloïde,Non fumeur,Non
+P0468,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0469,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0470,Homme,[60-69],Urbain,Myéloïde,Fumeur,Non
+P0471,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0472,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0473,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Oui
+P0474,Femme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0475,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0476,Femme,[10-19],Urbain,Lymphoïde,Fumeur,Non
+P0477,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0478,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0479,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0480,Femme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0481,Homme,70+,Urbain,Myéloïde,Fumeur,Non
+P0482,Homme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0483,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0484,Homme,[0-9],Urbain,Lymphoïde,Fumeur,Non
+P0485,Homme,[0-9],Rural,Myéloïde,Non fumeur,Non
+P0486,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0487,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0488,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0489,Femme,[20-29],Urbain,Lymphoïde,Fumeur,Non
+P0490,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Oui
+P0491,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0492,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0493,Femme,[30-39],Rural,Lymphoïde,Non fumeur,Non
+P0494,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0495,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0496,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Oui
+P0497,Femme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0498,Femme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0499,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0500,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0501,Femme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0502,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0503,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0504,Homme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0505,Homme,[20-29],Rural,Lymphoïde,Non fumeur,Non
+P0506,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0507,Homme,70+,Urbain,Myéloïde,Fumeur,Non
+P0508,Homme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0509,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0510,Femme,70+,Urbain,Myéloïde,Fumeur,Non
+P0511,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0512,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0513,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0514,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0515,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0516,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0517,Femme,[0-9],Urbain,Myéloïde,Fumeur,Non
+P0518,Femme,[30-39],Urbain,Myéloïde,Non fumeur,Oui
+P0519,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0520,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0521,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0522,Femme,[0-9],Rural,Lymphoïde,Non fumeur,Non
+P0523,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0524,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0525,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0526,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0527,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Oui
+P0528,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0529,Femme,[30-39],Urbain,Myéloïde,Fumeur,Non
+P0530,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0531,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0532,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0533,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0534,Homme,[20-29],Urbain,Myéloïde,Fumeur,Non
+P0535,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0536,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0537,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0538,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0539,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0540,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0541,Homme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0542,Homme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0543,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0544,Homme,70+,Urbain,Myéloïde,Non fumeur,Oui
+P0545,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0546,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0547,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0548,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0549,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0550,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0551,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0552,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0553,Femme,[0-9],Urbain,Lymphoïde,Non fumeur,Oui
+P0554,Femme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0555,Femme,[60-69],Urbain,Myéloïde,Fumeur,Non
+P0556,Femme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0557,Femme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0558,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0559,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0560,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0561,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0562,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0563,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0564,Homme,[50-59],Urbain,Myéloïde,Fumeur,Non
+P0565,Homme,70+,Urbain,Myéloïde,Fumeur,Non
+P0566,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0567,Femme,70+,Urbain,Myéloïde,Fumeur,Non
+P0568,Femme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0569,Homme,[0-9],Urbain,Myéloïde,Fumeur,Non
+P0570,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Oui
+P0571,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0572,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0573,Femme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0574,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0575,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0576,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0577,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0578,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0579,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0580,Femme,[60-69],Rural,Myéloïde,Non fumeur,Non
+P0581,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0582,Homme,[0-9],Urbain,Myéloïde,Fumeur,Non
+P0583,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0584,Homme,[60-69],Urbain,Lymphoïde,Non fumeur,Oui
+P0585,Femme,[50-59],Rural,Myéloïde,Non fumeur,Non
+P0586,Homme,[0-9],Rural,Lymphoïde,Non fumeur,Non
+P0587,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0588,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0589,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0590,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0591,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0592,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0593,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0594,Homme,[30-39],Urbain,Lymphoïde,Fumeur,Non
+P0595,Homme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0596,Homme,[40-49],Urbain,Non spécifiée,Non fumeur,Non
+P0597,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0598,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0599,Homme,[10-19],Rural,Myéloïde,Non fumeur,Non
+P0600,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0601,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0602,Femme,[20-29],Rural,Lymphoïde,Non fumeur,Non
+P0603,Homme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0604,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0605,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0606,Femme,[10-19],Urbain,Myéloïde,Fumeur,Non
+P0607,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0608,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0609,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0610,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0611,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0612,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Oui
+P0613,Femme,[0-9],Urbain,Myéloïde,Fumeur,Non
+P0614,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0615,Femme,[40-49],Rural,Myéloïde,Fumeur,Oui
+P0616,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Oui
+P0617,Femme,[50-59],Rural,Myéloïde,Non fumeur,Non
+P0618,Homme,70+,Rural,Lymphoïde,Non fumeur,Non
+P0619,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0620,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0621,Homme,70+,Rural,Myéloïde,Non fumeur,Non
+P0622,Homme,[0-9],Urbain,Lymphoïde,Fumeur,Non
+P0623,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0624,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0625,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0626,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0627,Homme,[20-29],Urbain,Lymphoïde,Fumeur,Non
+P0628,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0629,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0630,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0631,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0632,Femme,[30-39],Urbain,Non spécifiée,Non fumeur,Non
+P0633,Femme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0634,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0635,Homme,70+,Urbain,Myéloïde,Fumeur,Non
+P0636,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0637,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0638,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0639,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0640,Homme,[20-29],Rural,Myéloïde,Non fumeur,Non
+P0641,Homme,[0-9],Urbain,Myéloïde,Fumeur,Non
+P0642,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0643,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0644,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0645,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0646,Homme,[10-19],Urbain,Lymphoïde,Fumeur,Non
+P0647,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0648,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0649,Femme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0650,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0651,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0652,Homme,[20-29],Urbain,Myéloïde,Fumeur,Non
+P0653,Homme,70+,Rural,Myéloïde,Non fumeur,Non
+P0654,Femme,70+,Rural,Myéloïde,Non fumeur,Non
+P0655,Femme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0656,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0657,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0658,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0659,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0660,Homme,70+,Rural,Myéloïde,Fumeur,Oui
+P0661,Femme,[20-29],Urbain,Myéloïde,Fumeur,Non
+P0662,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0663,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0664,Homme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0665,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0666,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0667,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0668,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0669,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0670,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0671,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0672,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0673,Homme,70+,Urbain,Non spécifiée,Non fumeur,Non
+P0674,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0675,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0676,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Oui
+P0677,Femme,[0-9],Urbain,Non spécifiée,Non fumeur,Non
+P0678,Femme,[10-19],Urbain,Myéloïde,Fumeur,Non
+P0679,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0680,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0681,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0682,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0683,Homme,70+,Urbain,Myéloïde,Fumeur,Non
+P0684,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0685,Homme,[50-59],Rural,Myéloïde,Non fumeur,Non
+P0686,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0687,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0688,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0689,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0690,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0691,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0692,Homme,[30-39],Urbain,Lymphoïde,Fumeur,Oui
+P0693,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0694,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0695,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0696,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0697,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0698,Femme,[20-29],Urbain,Lymphoïde,Fumeur,Non
+P0699,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0700,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0701,Femme,[10-19],Urbain,Lymphoïde,Fumeur,Non
+P0702,Femme,[40-49],Urbain,Myéloïde,Fumeur,Non
+P0703,Homme,[10-19],Urbain,Lymphoïde,Fumeur,Non
+P0704,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0705,Femme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0706,Femme,[40-49],Urbain,Lymphoïde,Fumeur,Non
+P0707,Homme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0708,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0709,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0710,Homme,[50-59],Rural,Myéloïde,Non fumeur,Non
+P0711,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0712,Femme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0713,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0714,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0715,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0716,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0717,Homme,[10-19],Urbain,Lymphoïde,Fumeur,Non
+P0718,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0719,Femme,[60-69],Urbain,Lymphoïde,Fumeur,Non
+P0720,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0721,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0722,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0723,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0724,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0725,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0726,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0727,Homme,[50-59],Urbain,Myéloïde,Fumeur,Non
+P0728,Femme,[40-49],Urbain,Lymphoïde,Fumeur,Non
+P0729,Homme,[10-19],Urbain,Myéloïde,Fumeur,Non
+P0730,Homme,[30-39],Urbain,Lymphoïde,Fumeur,Non
+P0731,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0732,Femme,[0-9],Urbain,Myéloïde,Fumeur,Non
+P0733,Femme,[0-9],Rural,Lymphoïde,Non fumeur,Non
+P0734,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0735,Femme,[50-59],Rural,Myéloïde,Non fumeur,Non
+P0736,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0737,Homme,[0-9],Urbain,Myéloïde,Fumeur,Non
+P0738,Femme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0739,Homme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0740,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0741,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0742,Homme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0743,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0744,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0745,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0746,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0747,Homme,[20-29],Urbain,Myéloïde,Fumeur,Non
+P0748,Homme,[40-49],Urbain,Lymphoïde,Fumeur,Non
+P0749,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0750,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0751,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0752,Femme,[0-9],Urbain,Lymphoïde,Fumeur,Non
+P0753,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0754,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0755,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0756,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0757,Homme,[50-59],Urbain,Myéloïde,Fumeur,Non
+P0758,Homme,[20-29],Urbain,Lymphoïde,Fumeur,Non
+P0759,Femme,[60-69],Rural,Myéloïde,Fumeur,Non
+P0760,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0761,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0762,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0763,Homme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0764,Femme,[50-59],Rural,Myéloïde,Non fumeur,Non
+P0765,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0766,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0767,Femme,[10-19],Urbain,Myéloïde,Fumeur,Non
+P0768,Femme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0769,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0770,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0771,Femme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0772,Homme,[40-49],Urbain,Myéloïde,Fumeur,Non
+P0773,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0774,Femme,70+,Rural,Myéloïde,Non fumeur,Non
+P0775,Femme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0776,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0777,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0778,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0779,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0780,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0781,Homme,[10-19],Rural,Myéloïde,Non fumeur,Non
+P0782,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0783,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0784,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0785,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0786,Homme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0787,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0788,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0789,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0790,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0791,Femme,[0-9],Urbain,Non spécifiée,Non fumeur,Non
+P0792,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0793,Femme,[40-49],Urbain,Lymphoïde,Fumeur,Non
+P0794,Homme,70+,Urbain,Non spécifiée,Non fumeur,Non
+P0795,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0796,Homme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0797,Homme,[20-29],Urbain,Myéloïde,Fumeur,Non
+P0798,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0799,Homme,[20-29],Urbain,Lymphoïde,Fumeur,Non
+P0800,Homme,[20-29],Urbain,Lymphoïde,Fumeur,Non
+P0801,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0802,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0803,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0804,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0805,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0806,Femme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0807,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0808,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0809,Femme,[0-9],Rural,Myéloïde,Non fumeur,Non
+P0810,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0811,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0812,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0813,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0814,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0815,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0816,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0817,Homme,[20-29],Urbain,Lymphoïde,Fumeur,Non
+P0818,Homme,[20-29],Rural,Myéloïde,Non fumeur,Non
+P0819,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0820,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0821,Femme,[60-69],Urbain,Lymphoïde,Fumeur,Non
+P0822,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0823,Femme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0824,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0825,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0826,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0827,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0828,Homme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0829,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0830,Homme,[30-39],Urbain,Myéloïde,Fumeur,Oui
+P0831,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0832,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0833,Homme,[50-59],Urbain,Lymphoïde,Fumeur,Non
+P0834,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0835,Femme,[0-9],Urbain,Lymphoïde,Fumeur,Non
+P0836,Homme,[50-59],Urbain,Lymphoïde,Fumeur,Non
+P0837,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0838,Femme,[50-59],Rural,Myéloïde,Non fumeur,Non
+P0839,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0840,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0841,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0842,Homme,[40-49],Urbain,Myéloïde,Fumeur,Non
+P0843,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0844,Homme,[20-29],Rural,Lymphoïde,Non fumeur,Non
+P0845,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Oui
+P0846,Homme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0847,Femme,[10-19],Urbain,Myéloïde,Fumeur,Non
+P0848,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0849,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0850,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Oui
+P0851,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0852,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0853,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0854,Femme,[20-29],Urbain,Lymphoïde,Fumeur,Non
+P0855,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0856,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0857,Femme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0858,Femme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0859,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0860,Femme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0861,Femme,[0-9],Urbain,Myéloïde,Fumeur,Non
+P0862,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0863,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0864,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
+P0865,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0866,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0867,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0868,Femme,[50-59],Rural,Myéloïde,Non fumeur,Non
+P0869,Femme,[10-19],Rural,Myéloïde,Non fumeur,Non
+P0870,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0871,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0872,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0873,Femme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0874,Homme,[20-29],Rural,Myéloïde,Non fumeur,Non
+P0875,Femme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0876,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0877,Homme,[40-49],Urbain,Lymphoïde,Non fumeur,Non
+P0878,Homme,[0-9],Rural,Myéloïde,Non fumeur,Non
+P0879,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0880,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0881,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0882,Femme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0883,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0884,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0885,Homme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0886,Homme,[50-59],Rural,Lymphoïde,Non fumeur,Non
+P0887,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0888,Homme,70+,Urbain,Myéloïde,Fumeur,Non
+P0889,Homme,[40-49],Urbain,Myéloïde,Fumeur,Non
+P0890,Femme,70+,Urbain,Myéloïde,Non fumeur,Oui
+P0891,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0892,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0893,Homme,[40-49],Urbain,Myéloïde,Fumeur,Non
+P0894,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0895,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0896,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0897,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0898,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0899,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0900,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0901,Homme,70+,Rural,Myéloïde,Non fumeur,Non
+P0902,Femme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0903,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0904,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0905,Homme,[40-49],Rural,Myéloïde,Non fumeur,Non
+P0906,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0907,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0908,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0909,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0910,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0911,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0912,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0913,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0914,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0915,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0916,Homme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0917,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0918,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0919,Homme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0920,Homme,[60-69],Urbain,Lymphoïde,Fumeur,Non
+P0921,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Oui
+P0922,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0923,Femme,[60-69],Urbain,Myéloïde,Fumeur,Non
+P0924,Homme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0925,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0926,Homme,[20-29],Rural,Lymphoïde,Non fumeur,Non
+P0927,Homme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0928,Homme,[20-29],Rural,Myéloïde,Non fumeur,Non
+P0929,Femme,70+,Rural,Myéloïde,Non fumeur,Non
+P0930,Femme,[0-9],Urbain,Non spécifiée,Non fumeur,Non
+P0931,Homme,[20-29],Urbain,Lymphoïde,Non fumeur,Non
+P0932,Homme,[30-39],Rural,Lymphoïde,Non fumeur,Non
+P0933,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0934,Femme,[50-59],Urbain,Myéloïde,Fumeur,Non
+P0935,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0936,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0937,Femme,[10-19],Urbain,Myéloïde,Fumeur,Non
+P0938,Femme,[60-69],Urbain,Lymphoïde,Non fumeur,Non
+P0939,Homme,[0-9],Urbain,Myéloïde,Fumeur,Non
+P0940,Homme,[0-9],Urbain,Lymphoïde,Fumeur,Oui
+P0941,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0942,Homme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0943,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0944,Femme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0945,Femme,[60-69],Urbain,Lymphoïde,Fumeur,Non
+P0946,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Oui
+P0947,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0948,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0949,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0950,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0951,Homme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0952,Femme,[0-9],Urbain,Lymphoïde,Fumeur,Non
+P0953,Homme,70+,Urbain,Myéloïde,Fumeur,Non
+P0954,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0955,Homme,[50-59],Urbain,Myéloïde,Fumeur,Non
+P0956,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0957,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0958,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0959,Femme,[50-59],Urbain,Lymphoïde,Fumeur,Non
+P0960,Femme,[20-29],Urbain,Myéloïde,Non fumeur,Non
+P0961,Femme,70+,Rural,Myéloïde,Non fumeur,Non
+P0962,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0963,Homme,[50-59],Urbain,Myéloïde,Non fumeur,Non
+P0964,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0965,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0966,Homme,[50-59],Rural,Lymphoïde,Non fumeur,Non
+P0967,Homme,70+,Rural,Myéloïde,Non fumeur,Non
+P0968,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0969,Femme,[30-39],Urbain,Non spécifiée,Non fumeur,Non
+P0970,Homme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0971,Femme,[30-39],Urbain,Lymphoïde,Fumeur,Non
+P0972,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0973,Femme,[30-39],Urbain,Lymphoïde,Non fumeur,Non
+P0974,Femme,[50-59],Urbain,Myéloïde,Fumeur,Oui
+P0975,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0976,Homme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0977,Homme,[0-9],Urbain,Lymphoïde,Non fumeur,Non
+P0978,Homme,[30-39],Urbain,Myéloïde,Non fumeur,Non
+P0979,Femme,[40-49],Urbain,Myéloïde,Non fumeur,Non
+P0980,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0981,Homme,[50-59],Urbain,Non spécifiée,Non fumeur,Non
+P0982,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0983,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Non
+P0984,Femme,[40-49],Urbain,Myéloïde,Fumeur,Non
+P0985,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0986,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0987,Femme,[50-59],Urbain,Lymphoïde,Fumeur,Non
+P0988,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0989,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0990,Homme,[60-69],Urbain,Myéloïde,Non fumeur,Non
+P0991,Homme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0992,Homme,[0-9],Urbain,Lymphoïde,Fumeur,Non
+P0993,Femme,[50-59],Urbain,Lymphoïde,Non fumeur,Non
+P0994,Femme,70+,Urbain,Lymphoïde,Non fumeur,Non
+P0995,Homme,70+,Urbain,Myéloïde,Non fumeur,Non
+P0996,Femme,[10-19],Urbain,Lymphoïde,Non fumeur,Non
+P0997,Homme,[10-19],Urbain,Myéloïde,Non fumeur,Oui
+P0998,Femme,[0-9],Urbain,Myéloïde,Non fumeur,Non
+P0999,Femme,70+,Urbain,Myéloïde,Non fumeur,Non
+P1000,Homme,[50-59],Urbain,Lymphoïde,Non fumeur,Non

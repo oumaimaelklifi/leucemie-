@@ -1,34 +1,82 @@
-import tkinter as tk
-from tkinter import PhotoImage
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QSpacerItem, QSizePolicy
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtCore import Qt
 
-def afficher_page_accueil(frame_contenu, bouton):
-    # Nettoyer le contenu existant
-    for widget in frame_contenu.winfo_children():
-        widget.destroy()
+class PageAccueil(QWidget):
+    def __init__(self, parent=None):
+        super(PageAccueil, self).__init__(parent)
 
-    content_frame = tk.Frame(frame_contenu)
-    content_frame.pack(padx=20, pady=20, fill=tk.X)
+        # Layout principal vertical
+        layout_principal = QVBoxLayout()
+        layout_principal.setContentsMargins(20, 20, 20, 20)  
+        layout_principal.setSpacing(20)
+        self.setLayout(layout_principal)
 
-    # Texte d'introduction
-    label_texte = tk.Label(content_frame,
-                           text="La leucémie est un type de cancer qui affecte le sang et la moelle osseuse, où sont produits les cellules sanguines. "
-                                "Elle se caractérise par une production anormale et incontrôlée de globules blancs immatures ou anormaux, appelés blastes. "
-                                "Ces cellules anormales empêchent les cellules sanguines normales de fonctionner correctement....\n",
-                                
+        # Layout pour le contenu principal
+        layout_contenu = QHBoxLayout()
+        layout_contenu.setAlignment(Qt.AlignCenter)  
+
+        # Texte d'introduction
+        texte = QLabel(
+            "La leucémie est un type de cancer qui affecte le sang et la moelle osseuse, où sont produits les cellules sanguines. "
+            "Elle se caractérise par une production anormale et incontrôlée de globules blancs immatures ou anormaux, appelés blastes. "
+            "Ces cellules anormales empêchent les cellules sanguines normales de fonctionner correctement....\n"
+        )
+        texte.setWordWrap(True)
+        texte.setAlignment(Qt.AlignCenter)  
+        texte.setStyleSheet("font-family: Poppins; font-size: 25px; color: #333; font-weight:600;")
+        layout_contenu.addWidget(texte)
+
+        # Affichage de l'image
+        try:
+            image = QLabel()
+            pixmap = QPixmap("assets/1.png")
+            image.setPixmap(pixmap.scaled(750, 750, Qt.KeepAspectRatio))  
+            layout_contenu.addWidget(image, alignment=Qt.AlignRight | Qt.AlignVCenter)
+        except Exception as e:
+            layout_contenu.addWidget(QLabel("Image non trouvée."))
+
+        # Ajouter le contenu principal au layout principal
+        layout_principal.addLayout(layout_contenu)
+
+        # Ajouter un espace entre le contenu et la barre de navigation
+        spacer1 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        layout_principal.addItem(spacer1)
+
+        # Navigation bar
+        nav_layout = QHBoxLayout()
+        nav_layout.setSpacing(10)
+        nav_layout.setContentsMargins(00, 20, 20, 20)
+
+        nav_buttons = [
+            ("CANCER TODAY", "#ffa500"),
+            ("CANCER OVER TIME", "#007bff"),
+            ("CANCER TOMORROW", "#007bff"),
+            ("CANCER CAUSES", "#ff66b2"),
+            ("CANCER SURVIVAL", "#ff66b2"),
+            ("CANCER @CSU", "#b8d9ff"),
+        ]
+
+        # Ajout des boutons de navigation avec des actions (ou juste un exemple ici)
+        for text, color in nav_buttons:
+            button = QPushButton(text)
+            button.setStyleSheet(f"""
+                background-color: {color}; color: white; font-size: 17px; 
+                font-family: Poppins; font-weight: bold; padding: 10px 20px; border-radius: 10px;font-weight:900
+            """)
+            # Associer une action ou une fonctionnalité (ajoutez la fonction connect ici)
+            nav_layout.addWidget(button)
+
+        layout_principal.addLayout(nav_layout)
+
        
-                           font=("Poppins", 14),
-                           fg="#333",
-                           anchor="w",
-                           justify="center",
-                           wraplength=600)
-    label_texte.pack(side=tk.LEFT, padx=40, pady=20)
+        spacer2 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        layout_principal.addItem(spacer2)
 
-    # Affichage de l'image
-    try:
-        img = PhotoImage(file="assets/1.png")
-        label_image = tk.Label(content_frame, image=img)
-        label_image.image = img  # Conserver la référence à l'image
-        label_image.pack(side=tk.LEFT, padx=30)
-    except Exception as e:
-        label_image = tk.Label(content_frame, text="Image non trouvée.", font=("Montserrat", 14), fg="red")
-        label_image.pack(side=tk.LEFT, padx=40)
+  
+        footer = QLabel("© 2024 Leucémie au Maroc. Tous droits réservés.")
+        footer.setAlignment(Qt.AlignCenter)
+        footer.setStyleSheet("font-family: Roboto; font-size: 23px; font-weight: bold; color: white; background-color:  #3a3a74;")
+        footer.setFixedHeight(50)
+        layout_principal.addWidget(footer)
+

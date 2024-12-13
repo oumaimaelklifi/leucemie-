@@ -1,76 +1,109 @@
 
-import tkinter as tk
-from utils import set_window_icon
-from pages.home import afficher_page_accueil
-from pages.maps import afficher_page_maps
-from pages.statistics import afficher_page_statistics
-from pages.contact import afficher_page_contact
+import sys
+from PyQt5.QtWidgets import (
+    QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QStackedWidget
+)
 
-# Fonction pour mettre en évidence le bouton actif
-def mettre_en_evidence_bouton(bouton_actif):
-    style_defaut = {"bg": "#8B0000", "fg": "white"}
-    style_actif = {"bg": "white", "fg": "#8B0000"}
-    
-    for bouton in boutons:
-        bouton.config(**style_defaut)
-    
-    bouton_actif.config(**style_actif)
+from PyQt5.QtCore import Qt
+from pages.home import PageAccueil
+from pages.maps import PageMaps
+from pages.statistics import DiagrammesFacteursRisque
+from pages.contact import PageContact
 
-# Fonction générique pour changer de page et mettre en évidence le bouton
-def changer_de_page(frame_contenu, bouton, afficher_page):
-    afficher_page(frame_contenu, bouton)  
-    mettre_en_evidence_bouton(bouton)
+# Fenêtre principale
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super(MainWindow, self).__init__()
 
-# Initialisation de la fenêtre principale
-root = tk.Tk()
-root.title("Leucémie")
-set_window_icon(root)
+        self.setWindowTitle("Leucémie")
+        self.setGeometry(100, 100, 800, 600)
 
-# Frame pour le logo
-frame_logo = tk.Frame(root, bg="#8B0000", height=100)
-frame_logo.pack(fill=tk.X)
-label_logo = tk.Label(frame_logo, text="Leucémie au Maroc", font=("Roboto", 24, "bold"), fg="white", bg="#8B0000")
-label_logo.pack(pady=20)
+        # Conteneur principal
+        self.central_widget = QWidget()
+        self.setCentralWidget(self.central_widget)
+        main_layout = QVBoxLayout()
+        main_layout.setSpacing(0)  
+        main_layout.setContentsMargins(0, 0, 0, 0) 
+        self.central_widget.setLayout(main_layout)
 
-# Navigation
-frame_nav = tk.Frame(root, bg="#8B0000", height=50)
-frame_nav.pack(fill=tk.X)
-frame_nav_buttons = tk.Frame(frame_nav, bg="#8B0000")
-frame_nav_buttons.pack()
+        # Barre de logo
+        logo_bar = QVBoxLayout()
+        logo_label = QLabel("Leucémie au Maroc")
+        logo_label.setStyleSheet("font-family: Poppins; font-size: 29px; font-weight: bold; color: white;")
+        logo_label.setAlignment(Qt.AlignCenter)
+        logo_bar_widget = QWidget()
+        logo_bar_widget.setStyleSheet("background-color:  #3a3a74;")
+        logo_bar_widget.setLayout(logo_bar)
+        logo_bar.addWidget(logo_label)
+        main_layout.addWidget(logo_bar_widget)
 
-frame_contenu = tk.Frame(root)
-frame_contenu.pack(fill=tk.BOTH, expand=True)
+        # Navigation
+        nav_bar = QHBoxLayout()
+        nav_widget = QWidget()
+        nav_widget.setStyleSheet("background-color:  #3a3a74;")
+        nav_widget.setLayout(nav_bar)
+        main_layout.addWidget(nav_widget)
 
-boutons = []
+        self.pages = QStackedWidget()
+        main_layout.addWidget(self.pages)
 
-button_accueil = tk.Button(frame_nav_buttons, text="Accueil", font=("Roboto", 15), width=15, bd=0,
-                           command=lambda: changer_de_page(frame_contenu, button_accueil, afficher_page_accueil))
-button_accueil.pack(side=tk.LEFT, padx=15)
-boutons.append(button_accueil)
+        # Ajouter les pages au QStackedWidget
+        self.page_accueil = PageAccueil()
+        self.page_maps = PageMaps()
+        self.page_statistiques = DiagrammesFacteursRisque()
+        self.page_contact = PageContact()
+        self.pages.addWidget(self.page_accueil)
+        self.pages.addWidget(self.page_maps)
+        self.pages.addWidget(self.page_statistiques)
+        self.pages.addWidget(self.page_contact)
 
-button_maps = tk.Button(frame_nav_buttons, text="Maps", font=("Roboto", 15), width=15, bd=0,
-                        command=lambda: changer_de_page(frame_contenu, button_maps, afficher_page_maps))
-button_maps.pack(side=tk.LEFT, padx=15)
-boutons.append(button_maps)
+        # Boutons de navigation
+        self.buttons = []
+        self.active_button = None
 
-button_statistics = tk.Button(frame_nav_buttons, text="Statistique", font=("Roboto", 15), width=15, bd=0,
-                              command=lambda: changer_de_page(frame_contenu, button_statistics, afficher_page_statistics))
-button_statistics.pack(side=tk.LEFT, padx=15)
-boutons.append(button_statistics)
+        buttons = [
+            ("Accueil", self.show_page_accueil),
+            ("Maps", self.show_page_maps),
+            ("Statistiques", self.show_page_statistiques),
+            ("Contact", self.show_page_contact),
+        ]
 
-button_contact = tk.Button(frame_nav_buttons, text="Contact", font=("Roboto", 15), width=15, bd=0,
-                           command=lambda: changer_de_page(frame_contenu, button_contact, afficher_page_contact))
-button_contact.pack(side=tk.LEFT, padx=15)
-boutons.append(button_contact)
+        for label, callback in buttons:
+            btn = QPushButton(label)
+            btn.setStyleSheet("font-family:Poppins; font-size: 24px; color: white; background-color:  #3a3a74; border: none;font-weight:900")
+            btn.clicked.connect(callback)
+            nav_bar.addWidget(btn)
+            self.buttons.append(btn)
 
-# Footer
-footer_frame = tk.Frame(root, bg="#2c2c2c", height=40)
-footer_frame.pack(fill=tk.X, side=tk.BOTTOM)
-footer_label = tk.Label(footer_frame, text="Copyright © 2025 | Géoinformation | Tous droits réservés",
-                        font=("Roboto", 12, "bold"), fg="white", bg="#2c2c2c")
-footer_label.pack(pady=10)
+        # Afficher la page d'accueil par défaut
+        self.show_page_accueil()
 
-# Page d'accueil par défaut
-changer_de_page(frame_contenu, button_accueil, afficher_page_accueil)
-root.mainloop()
+    # Méthodes pour changer de page
+    def show_page_accueil(self):
+        self.change_page(self.page_accueil, self.buttons[0])
+
+    def show_page_maps(self):
+        self.change_page(self.page_maps, self.buttons[1])
+
+    def show_page_statistiques(self):
+        self.change_page(self.page_statistiques, self.buttons[2])
+
+    def show_page_contact(self):
+        self.change_page(self.page_contact, self.buttons[3])
+
+    # Fonction pour changer de page et de style
+    def change_page(self, page, button):
+        self.pages.setCurrentWidget(page)
+        if self.active_button:
+            self.active_button.setStyleSheet("font-family: Roboto; font-size: 24px; color: white; background-color:  #3a3a74; border: none;font-weight:900")
+        button.setStyleSheet("font-family: Poppin; font-size: 24px; color:  #3a3a74; background-color: white; border: 1px solid  #3a3a74;font-weight:900")
+        self.active_button = button
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+
 

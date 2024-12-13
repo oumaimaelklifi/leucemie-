@@ -1,101 +1,108 @@
+import sys
 import folium
-import webview
-import tkinter as tk
-from tkinter import Label
-import os  # Pour gérer les chemins de fichiers
+import os
+from PyQt5.QtCore import QUrl
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout
+from PyQt5.QtWebEngineWidgets import QWebEngineView
 
-def afficher_page_maps(frame_contenu, bouton):
-    # Nettoyer le contenu existant dans frame_contenu
-    for widget in frame_contenu.winfo_children():
-        widget.destroy()
+# Exemple de données de risque
+data_risk = {
+    "Laayoune-Saguia Hamra": {"risk": "Bas", "percentage": "5%", "factors": "Faible densité, sécurité renforcée"},
+    "Casablanca-Settat": {"risk": "Élevé", "percentage": "40%", "factors": "Forte urbanisation, densité élevée"},
+    "Fès-Meknès": {"risk": "Élevé", "percentage": "30%", "factors": "Zone industrielle, pollution"},
+    "Rabat-Salé-Kénitra": {"risk": "Bas", "percentage": "10%", "factors": "Bonne gestion des ressources"},
+}
 
-    # Dictionnaire avec les villes et leurs coordonnées (latitude, longitude) et facteur de risque
-    cities = {
-        "Casablanca": {"coordinates": [33.5736, -7.5898], "risk_factor": "Élevé"},
-        "Marrakech": {"coordinates": [31.6295, -8.0037], "risk_factor": "Moyenne"},
-        "Rabat": {"coordinates": [34.020882, -6.84165], "risk_factor": "Faible"},
-        "Fès": {"coordinates": [34.0331, -5.0007], "risk_factor": "Moyenne"},
-        "Agadir": {"coordinates": [30.4202, -9.5982], "risk_factor": "Faible"}
-    }
+# Classe de la page Maps
+class PageMaps(QWidget):
+    def __init__(self, parent=None):
+        super(PageMaps, self).__init__(parent)
 
-    # Dictionnaire de couleurs pour chaque facteur de risque
-    risk_colors = {
-        "Élevé": "red",
-        "Moyenne": "orange",
-        "Faible": "green"
-    }
+        # Créer une carte centrée sur le Maroc
+        self.map = folium.Map(location=[31.7917, -7.0926], zoom_start=6)
 
-    # Dictionnaire pour les tailles de rayon
-    risk_radius = {
-        "Élevé": 25,   # Plus grand rayon
-        "Moyenne": 15,  # Rayon moyen
-        "Faible": 10    # Plus petit rayon
-    }
+        # Chemin vers le fichier GeoJSON
+        geojson_path = r'C:\Users\HP\Desktop\tkinter\maroc.geojson'
 
-    # Créer la carte centrée sur le Maroc
-    m = folium.Map(location=[31.7917, -7.0926], zoom_start=6)
+        if not os.path.exists(geojson_path):
+            print(f"Erreur : le fichier GeoJSON '{geojson_path}' est introuvable.")
+            return
 
-    # Ajouter chaque ville sur la carte avec un pop-up dynamique pour le facteur de risque
-    for city, data in cities.items():
-        # Définir la couleur et le rayon en fonction du facteur de risque
-        risk_color = risk_colors.get(data["risk_factor"], "gray")
-        risk_circle_radius = risk_radius.get(data["risk_factor"], 6)
+        # Fonction pour récupérer les informations de risque et personnaliser le style
+        def style_function(feature):
+            region_name = feature['properties'].get('region', 'Inconnu')
+            risk_info = data_risk.get(region_name, {"risk": "Inconnu", "percentage": "0%"})
+            risk = risk_info['risk']
+            color = {
+                "Bas": "#00ff00",      # Vert pour faible risque
+                "Modéré": "#ffff00",   # Jaune pour risque modéré
+                "Élevé": "#ff0000"     # Rouge pour risque élevé
+            }.get(risk, "#d3d3d3")    # Gris par défaut
+            return {
+                'fillColor': color,
+                'color': 'black',
+                'weight': 1,
+                'fillOpacity': 0.5
+            }
 
-        # Ajouter un marqueur pour chaque ville
-        folium.Marker(
-            location=data["coordinates"],
-            popup=f"{city}: Facteur de risque = {data['risk_factor']}",
-            tooltip=city
-        ).add_to(m)
+        # Fonction pour créer des tooltips détaillés avec les facteurs de risque
+        def create_tooltip(feature):
+            region_name = feature['properties'].get('region', 'Inconnu')
+            risk_info = data_risk.get(region_name, {"risk": "Inconnu", "percentage": "0%", "factors": "Non spécifié"})
+            tooltip_content = f"""
+            <div style='font-family: Arial; font-size: 12px;'>
+                <strong>Région :</strong> {region_name}<br>
+                <strong>Niveau de risque :</strong> {risk_info['risk']}<br>
+                <strong>Pourcentage :</strong> {risk_info['percentage']}<br>
+                <strong>Facteurs :</strong> {risk_info['factors']}<br>
+            </div>
+            """
+            return tooltip_content
 
-        # Ajouter un cercle coloré pour indiquer le facteur de risque
-        folium.CircleMarker(
-            location=data["coordinates"],
-            radius=risk_circle_radius,
-            color=risk_color,
-            fill=True,
-            fill_color=risk_color,
-            fill_opacity=0.5
-        ).add_to(m)
+        # Ajouter le GeoJSON avec des Tooltips détaillés
+        geojson = folium.GeoJson(
+            geojson_path,
+            name="Carte des risques",
+            style_function=style_function,
+        )
 
-    # Ajouter une clé explicative directement sur la carte
-    key_html = """
-    <div style="
-        position: fixed; 
-       
-        margin-top:210px;
-        margin-left:100px;
+        # Ajouter des tooltips au GeoJSON
+        geojson.add_child(folium.GeoJsonTooltip(
+            fields=["region"],
+            aliases=["Région :"],
+            labels=True,
+            sticky=True,
+            style=("background-color: white; color: black; font-family: Arial; font-size: 12px; padding: 10px;"),
+            parse_html=True,
+            show=True
+        ))
 
-        width: 250px;
-        font-weight:700;
-        height: 230px; 
-        background-color:#8B0000; 
-        border: 2px solid #8B0000; 
-        z-index: 999; 
-        padding: 10px;
-        color:white;
-        font-size: 17px;
-      
-    ">
-        <b style="display: block; text-align: center;">Clé de la carte :</b><br>
-        <span style="color: red;">• Rouge :</span> Risque élevé<br>
-        <span style="color: orange;">• Orange :</span> Risque moyen<br>
-        <span style="color: green;">• Vert :</span> Risque faible<br>
-    </div>
-    """
-    m.get_root().html.add_child(folium.Element(key_html))
+        # Ajouter le GeoJSON à la carte
+        geojson.add_to(self.map)
 
-    # Définir un chemin absolu pour le fichier HTML
-    output_file = os.path.join(os.getcwd(), "carte_interactive_villes_maroc.html")
+        # Enregistrer la carte dans un fichier HTML
+        map_html_path = os.path.join(os.path.dirname(__file__), 'map_maroc_regions.html')
+        self.map.save(map_html_path)
 
-    # Sauvegarder la carte dans le fichier HTML
-    m.save(output_file)
+        # Créer un QWebEngineView pour afficher la carte
+        self.webview = QWebEngineView()
+        self.webview.setUrl(QUrl.fromLocalFile(map_html_path))
 
-    # Vérifier si le fichier a été créé
-    if not os.path.exists(output_file):
-        raise FileNotFoundError(f"Le fichier HTML '{output_file}' n'a pas été créé.")
+        # Configurer le layout
+        layout = QVBoxLayout()
+        layout.addWidget(self.webview)
+        self.setLayout(layout)
 
-    # Intégrer la carte dans un webview à l'intérieur de Tkinter
-    webview.create_window('Maroc', output_file)
-    webview.start()
+# Classe principale de l'application
+class MainWindow(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Carte des Risques")
+        self.setGeometry(100, 100, 800, 600)
+
+        # Ajouter la page des cartes
+        layout = QVBoxLayout()
+        self.map_page = PageMaps()
+        layout.addWidget(self.map_page)
+        self.setLayout(layout)
 
