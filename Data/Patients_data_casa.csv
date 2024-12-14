@@ -1,4 +1,4 @@
-﻿ID Patient,Sexe,Groupe d'âge,Environnement,Type de leucémie,Tabagisme,Facteur génétique
+﻿ID Patient,Sexe,Âge,Environnement,Type de leucémie,Tabagisme,Génétique
 P0001,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
 P0002,Homme,70+,Urbain,Lymphoïde,Fumeur,Non
 P0003,Femme,[10-19],Urbain,Myéloïde,Non fumeur,Non
