@@ -137,7 +137,6 @@ class DiagramAppFesMeknes(QMainWindow):
 
     def add_export_button(self):
         export_button = QPushButton("Exporter les graphiques en PDF")
-        export_button.setFont(QFont("Arial", 14))
         export_button.clicked.connect(self.export_to_pdf)
 
         layout = QVBoxLayout()
