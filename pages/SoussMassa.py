@@ -1,11 +1,12 @@
+import os
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget, QVBoxLayout, QWidget, QLabel
+import pandas as pd
+from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget, QVBoxLayout, QWidget, QLabel, QPushButton
 from PyQt5.QtGui import QFont
 from PyQt5.QtCore import Qt
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.backends.backend_pdf import PdfPages
 import matplotlib.pyplot as plt
-import pandas as pd
-
 # Charger les données
 file_path = 'Data/Patients_data_souss_massa.xlsx'
 data = pd.read_excel(file_path)
@@ -17,6 +18,7 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
         self.setCentralWidget(self.tabs)
 
         self.create_tabs()
+        self.figures = []
 
     def create_tabs(self):
         factors = {
@@ -99,5 +101,29 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
 
         canvas = FigureCanvas(fig)
         return canvas
+    def add_export_button(self):
+        export_button = QPushButton("Exporter les graphiques en PDF")
+        export_button.setFont(QFont("Arial", 14))
+        export_button.clicked.connect(self.export_to_pdf)
+
+        layout = QVBoxLayout()
+        layout.addWidget(export_button)
+        container = QWidget()
+        container.setLayout(layout)
+        self.tabs.addTab(container, "Exporter")
+
+    def export_to_pdf(self):
+        # Détecter le bureau de l'utilisateur
+        desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+        pdf_path = os.path.join(desktop_path, "SoussMassa.pdf")
+
+        # Générer le fichier PDF
+        with PdfPages(pdf_path) as pdf:
+            for fig in self.figures:
+                pdf.savefig(fig)
+            print(f"PDF sauvegardé sur le bureau : {pdf_path}")
+
+        # Ouvrir automatiquement le fichier PDF
+        os.startfile(pdf_path)
 
 

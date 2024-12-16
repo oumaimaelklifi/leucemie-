@@ -4,6 +4,7 @@ from PyQt5.QtCore import Qt
 from pages.SoussMassa import RiskFactorChartsAppSoussMassa
 from pages.Rabat import RiskFactorChartsAppRabat
 from pages.Casa import RiskFactorChartsAppCasa
+from pages.FesMeknes import DiagramAppFesMeknes
 
 class DiagrammesFacteursRisque(QMainWindow):
     def __init__(self):
@@ -21,7 +22,7 @@ class DiagrammesFacteursRisque(QMainWindow):
         self.filtre_layout.addWidget(self.zone_label)
 
         self.zone_combobox = QComboBox()
-        self.zone_combobox.addItems(["Rabat", "Casablanca", "Region Sous Massa"])
+        self.zone_combobox.addItems(["Rabat", "Casablanca", "Region Sous Massa","Fes Meknes"])
         self.zone_combobox.currentTextChanged.connect(self.appliquer_filtre)
         self.filtre_layout.addWidget(self.zone_combobox)
 
@@ -43,6 +44,7 @@ class DiagrammesFacteursRisque(QMainWindow):
             "Rabat": RiskFactorChartsAppRabat,
             "Casablanca": RiskFactorChartsAppCasa,
             "Region Sous Massa": RiskFactorChartsAppSoussMassa,
+            "Fes Meknes" :DiagramAppFesMeknes
         }
 
         # Sélectionner "Rabat" par défaut dans la combobox et afficher les diagrammes associés

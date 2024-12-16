@@ -1,13 +1,12 @@
+import os
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget, QVBoxLayout, QWidget, QLabel
-from PyQt5.QtGui import QFont
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-import matplotlib.pyplot as plt
 import pandas as pd
-import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget, QVBoxLayout, QWidget, QLabel
+from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget, QVBoxLayout, QWidget, QLabel, QPushButton
 from PyQt5.QtGui import QFont
 from PyQt5.QtCore import Qt
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.backends.backend_pdf import PdfPages
+import matplotlib.pyplot as plt
 
 # Charger les données
 data = pd.read_csv('Data/Patients_data_casa.csv')
@@ -15,13 +14,17 @@ data = pd.read_csv('Data/Patients_data_casa.csv')
 class RiskFactorChartsAppCasa(QMainWindow):
     def __init__(self):
         super().__init__()
-        
+
         self.setGeometry(100, 100, 1200, 800)
+    
 
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
 
+        self.figures = []  # Liste pour stocker les figures à exporter
         self.create_tabs()
+
+        self.add_export_button()
 
     def create_tabs(self):
         factors = {
@@ -38,12 +41,12 @@ class RiskFactorChartsAppCasa(QMainWindow):
             layout = QVBoxLayout()
 
             # Ajouter le diagramme
-            canvas = self.create_chart(factor)
+            canvas, fig = self.create_chart(factor)
+            self.figures.append(fig)  # Ajouter la figure à la liste
             layout.addWidget(canvas)
 
             # Ajouter une explication
             label = QLabel(explanation)
-            
             label.setFont(QFont("Arial", 16))
             label.setAlignment(Qt.AlignCenter)
             layout.addWidget(label)
@@ -65,7 +68,7 @@ class RiskFactorChartsAppCasa(QMainWindow):
             ax.set_xlabel(factor)
             plt.xticks(rotation=45)
         elif factor == "Tabagisme":
-            # Tabagisme: ajouter un diagramme circulaire et deux diagrammes en barres
+            # Tabagisme : Ajouter un diagramme circulaire et deux diagrammes en barres
             fig, axes = plt.subplots(1, 3, figsize=(18, 6))
 
             # Diagramme circulaire pour Tabagisme
@@ -80,7 +83,7 @@ class RiskFactorChartsAppCasa(QMainWindow):
             for text in autotexts:
                 text.set_color("white")
                 text.set_fontsize(10)
-            axes[0].set_title("Répartition des Fumeurs et Non-Fumeurs",fontsize=18, fontdict={'weight': 'bold'})
+            axes[0].set_title("Répartition des Fumeurs et Non-Fumeurs", fontsize=18, fontdict={'weight': 'bold'})
 
             # Relation entre Tabagisme et Âge
             age_smoking = pd.crosstab(data["Âge"], data[factor])
@@ -114,4 +117,29 @@ class RiskFactorChartsAppCasa(QMainWindow):
             ax.set_title(f"Répartition par {factor}", fontsize=18, fontdict={'weight': 'bold'})
 
         canvas = FigureCanvas(fig)
-        return canvas
+        return canvas, fig
+
+    def add_export_button(self):
+        export_button = QPushButton("Exporter les graphiques en PDF")
+        export_button.setFont(QFont("Arial", 14))
+        export_button.clicked.connect(self.export_to_pdf)
+
+        layout = QVBoxLayout()
+        layout.addWidget(export_button)
+        container = QWidget()
+        container.setLayout(layout)
+        self.tabs.addTab(container, "Exporter")
+
+    def export_to_pdf(self):
+        # Détecter le bureau de l'utilisateur
+        desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+        pdf_path = os.path.join(desktop_path, "Casablanca.pdf")
+
+        # Générer le fichier PDF
+        with PdfPages(pdf_path) as pdf:
+            for fig in self.figures:
+                pdf.savefig(fig)
+            print(f"PDF sauvegardé sur le bureau : {pdf_path}")
+
+        # Ouvrir automatiquement le fichier PDF
+        os.startfile(pdf_path)

@@ -1,13 +1,12 @@
+import os
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget, QVBoxLayout, QWidget, QLabel
-from PyQt5.QtGui import QFont
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-import matplotlib.pyplot as plt
 import pandas as pd
-import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget, QVBoxLayout, QWidget, QLabel
+from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget, QVBoxLayout, QWidget, QLabel, QPushButton, QFileDialog
 from PyQt5.QtGui import QFont
 from PyQt5.QtCore import Qt
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.backends.backend_pdf import PdfPages
+import matplotlib.pyplot as plt
 
 # Charger les données
 data = pd.read_csv('Data/patients_data_rabat.csv')
@@ -21,7 +20,10 @@ class RiskFactorChartsAppRabat(QMainWindow):
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
 
-        self.create_tabs()
+        self.figures = []  # Liste pour stocker les figures à exporter
+        
+        self.create_tabs()  # Créer les onglets
+        self.add_export_button()  # Ajouter le bouton d'exportation en PDF à la fin
 
     def create_tabs(self):
         factors = {
@@ -41,13 +43,8 @@ class RiskFactorChartsAppRabat(QMainWindow):
 
             # Ajouter une explication
             label = QLabel(explanation)
-        
-           
             label.setFont(QFont("Arial", 16))
             layout.addWidget(label, alignment=Qt.AlignHCenter)
-             
-           
-            layout.addWidget(label)
 
             tab.setLayout(layout)
             self.tabs.addTab(tab, factor)
@@ -58,12 +55,9 @@ class RiskFactorChartsAppRabat(QMainWindow):
         sizes = data_counts.values
 
         if factor == "Groupe d'âge":
-            # Organiser les classes d'âge par ordre croissant
             sorted_data = data[factor].value_counts().sort_index()
             labels = sorted_data.index.tolist()
             sizes = sorted_data.values
-
-            # Diagrammes en barres pour Groupe d'âge
             fig, ax = plt.subplots()
             ax.bar(labels, sizes, color=["#1f77b4", "#d62728"][:len(labels)])
             ax.set_title(f"Répartition par {factor}", fontsize=18, fontdict={'weight': 'bold'})
@@ -71,7 +65,6 @@ class RiskFactorChartsAppRabat(QMainWindow):
             ax.set_xlabel(factor)
             plt.xticks(rotation=45)
         elif factor == "Type de leucémie":
-            # Diagrammes en barres pour Type de leucémie
             fig, ax = plt.subplots()
             ax.bar(labels, sizes, color=["#1f77b4", "#d62728"][:len(labels)])
             ax.set_title(f"Répartition par {factor}", fontsize=18, fontdict={'weight': 'bold'})
@@ -79,7 +72,6 @@ class RiskFactorChartsAppRabat(QMainWindow):
             ax.set_xlabel(factor)
             plt.xticks(rotation=45)
         else:
-            # Diagrammes circulaires pour les autres facteurs
             fig, ax = plt.subplots()
             wedges, texts, autotexts = ax.pie(
                 sizes, autopct="%1.1f%%", startangle=90, colors=["#1f77b4", "#d62728", "#ff7f0e", "#2ca02c"][:len(labels)]
@@ -91,4 +83,30 @@ class RiskFactorChartsAppRabat(QMainWindow):
                 text.set_fontsize(10)
 
         canvas = FigureCanvas(fig)
+        self.figures.append(fig)  # Ajouter la figure à la liste pour l'exportation
         return canvas
+
+    def add_export_button(self):
+        export_button = QPushButton("Exporter les graphiques en PDF")
+        export_button.setFont(QFont("Arial", 14))
+        export_button.clicked.connect(self.export_to_pdf)
+
+        layout = QVBoxLayout()
+        layout.addWidget(export_button)
+        container = QWidget()
+        container.setLayout(layout)
+        self.tabs.addTab(container, "Exporter")
+
+    def export_to_pdf(self):
+        # Détecter le bureau de l'utilisateur
+        desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+        pdf_path = os.path.join(desktop_path, "Rabat.pdf")
+
+        # Générer le fichier PDF
+        with PdfPages(pdf_path) as pdf:
+            for fig in self.figures:
+                pdf.savefig(fig)
+        print(f"PDF sauvegardé sur le bureau : {pdf_path}")
+
+        # Ouvrir automatiquement le fichier PDF
+        os.startfile(pdf_path)
