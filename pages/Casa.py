@@ -17,11 +17,10 @@ class RiskFactorChartsAppCasa(QMainWindow):
 
         self.setGeometry(100, 100, 1200, 800)
     
-
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
 
-        self.figures = []  # Liste pour stocker les figures à exporter
+        self.figures = []  
         self.create_tabs()
 
         self.add_export_button()
