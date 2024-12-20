@@ -130,7 +130,7 @@ class RiskFactorChartsAppCasa(QMainWindow):
         # Générer le fichier PDF
         with PdfPages(pdf_path) as pdf:
             # Ajouter une page de titre
-            fig, ax = plt.subplots(figsize=(8.27, 11.69))  # Taille A4
+            fig, ax = plt.subplots(figsize=(8.27, 11.69))  
             ax.axis('off')
 
             title = "Rapport de la ville de Casablanca"
