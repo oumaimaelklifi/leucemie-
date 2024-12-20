@@ -135,26 +135,86 @@ class DiagramAppFesMeknes(QMainWindow):
 
         return widget
 
-    def add_export_button(self):
+    def add_export_button_to_main_window(self):
         export_button = QPushButton("Exporter les graphiques en PDF")
+        export_button.setFont(QFont("Arial", 14))
         export_button.clicked.connect(self.export_to_pdf)
 
         layout = QVBoxLayout()
         layout.addWidget(export_button)
         container = QWidget()
         container.setLayout(layout)
-        self.tabs.addTab(container, "Exporter")
+        self.setCentralWidget(self.tabs)
+
+        main_layout = QVBoxLayout()
+        main_layout.addWidget(self.tabs)
+        main_layout.addWidget(export_button)
+
+        main_widget = QWidget()
+        main_widget.setLayout(main_layout)
+        self.setCentralWidget(main_widget)
 
     def export_to_pdf(self):
-        # Détecter le bureau de l'utilisateur
-        desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
-        pdf_path = os.path.join(desktop_path, "Fes_Mekens.pdf")
+            # Détecter le bureau de l'utilisateur
+            desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+            pdf_path = os.path.join(desktop_path, "Rapport_Fes_Meknes.pdf")
 
-        # Générer le fichier PDF
-        with PdfPages(pdf_path) as pdf:
-            for fig in self.figures:
+            # Générer le fichier PDF
+            with PdfPages(pdf_path) as pdf:
+                # Ajouter une page de titre
+                fig, ax = plt.subplots(figsize=(8.27, 11.69))  # Taille A4
+                ax.axis('off')
+
+                title = "Rapport de la region de Fes Meknes "
+                subtitle = "Nombre de population affectée par la leucémie : 1000 patients"
+                risk_factors = (
+                    "Facteurs de risque principaux :\n\n"
+                    
+                    "- Répartition par sexe : Femme/Homme\n\n"
+                    "- Groupes d'âge : Les âges les plus touchés.\n\n"
+                )
+
+                ax.text(0.5, 0.85, title, fontsize=24, fontweight='bold', ha='center')
+                ax.text(0.5, 0.75, subtitle, fontsize=16, ha='center', fontweight='bold')
+                ax.text(0.2, 0.6, risk_factors, fontsize=16, va='top')
+
                 pdf.savefig(fig)
-            print(f"PDF sauvegardé sur le bureau : {pdf_path}")
+                plt.close(fig)
 
-   
-        os.startfile(pdf_path)
+                # Ajouter les diagrammes avec explications sur la même page
+                factors_explanations = {
+        
+                    "Groupe d'âge": "L'âge est un facteur de risque clé pour divers types de leucémie.",
+                    "Sexe": "Le sexe peut influencer la prévalence de certains types de leucémie.",
+                    
+                    
+                }
+
+                for fig, (factor, explanation) in zip(self.figures, factors_explanations.items()):
+                    # Sauvegarder le graphique temporairement en tant qu'image
+                    image_path = os.path.join(desktop_path, f"{factor}.png")
+                    fig.savefig(image_path, format='png', bbox_inches='tight')
+
+                    # Créer une nouvelle figure combinée
+                    combined_fig, axs = plt.subplots(2, 1, figsize=(8.27, 11.69))  
+                    axs[0].axis('off') 
+                    axs[0].text(
+                        0.5, 0.5, explanation, fontsize=14, wrap=True, ha='center', va='center',
+                        bbox=dict(boxstyle="round,pad=0.3", edgecolor="black", facecolor="#f0f0f0")
+                    )
+
+                    # Charger l'image sauvegardée et l'afficher
+                    img = plt.imread(image_path)
+                    axs[1].imshow(img, aspect='auto')
+                    axs[1].axis('off')
+
+                    # Sauvegarder la page combinée dans le PDF
+                    pdf.savefig(combined_fig)
+                    plt.close(combined_fig)
+
+                    # Supprimer l'image temporaire
+                    os.remove(image_path)
+
+            print(f"PDF sauvegardé sur le bureau : {pdf_path}")
+            os.startfile(pdf_path)
+
