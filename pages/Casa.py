@@ -41,7 +41,7 @@ class RiskFactorChartsAppCasa(QMainWindow):
 
             # Ajouter le diagramme
             canvas, fig = self.create_chart(factor)
-            self.figures.append(fig)  # Ajouter la figure à la liste
+            self.figures.append(fig)  
             layout.addWidget(canvas)
 
             # Ajouter une explication

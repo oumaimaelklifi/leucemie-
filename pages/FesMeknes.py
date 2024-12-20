@@ -19,13 +19,13 @@ class DiagramAppFesMeknes(QMainWindow):
         self.setGeometry(100, 100, 1000, 800)
 
         self.data = data
-        self.figures = []  # List to store figures for exporting
+        self.figures = [] 
 
         # Initialisation de l'interface
         self.init_ui()
 
     def init_ui(self):
-        # Create a layout for the central widget
+     
         main_layout = QVBoxLayout()
 
         # Create the tab widget
@@ -156,5 +156,5 @@ class DiagramAppFesMeknes(QMainWindow):
                 pdf.savefig(fig)
             print(f"PDF sauvegardé sur le bureau : {pdf_path}")
 
-        # Ouvrir automatiquement le fichier PDF
+   
         os.startfile(pdf_path)

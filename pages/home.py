@@ -57,14 +57,14 @@ class PageAccueil(QWidget):
             ("CANCER @CSU", "#b8d9ff"),
         ]
 
-        # Ajout des boutons de navigation avec des actions (ou juste un exemple ici)
+  
         for text, color in nav_buttons:
             button = QPushButton(text)
             button.setStyleSheet(f"""
                 background-color: {color}; color: white; font-size: 17px; 
                 font-family: Poppins; font-weight: bold; padding: 10px 20px; border-radius: 10px;font-weight:900
             """)
-            # Associer une action ou une fonctionnalité (ajoutez la fonction connect ici)
+          
             nav_layout.addWidget(button)
 
         layout_principal.addLayout(nav_layout)

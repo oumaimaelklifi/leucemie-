@@ -70,7 +70,7 @@ class PageContact(QWidget):
 
         # Créer un QHBoxLayout pour centrer le bouton
         layout_bouton = QHBoxLayout()
-        layout_bouton.setAlignment(Qt.AlignCenter)  # Centrer horizontalement
+        layout_bouton.setAlignment(Qt.AlignCenter) 
 
         bouton_envoyer = QPushButton("Envoyer")
         bouton_envoyer.setStyleSheet("font-family: Poppins; font-size: 20px; background-color: #8B0000; color: white; padding: 10px; border-radius: 5px;font-weight:900")

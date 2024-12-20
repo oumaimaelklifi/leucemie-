@@ -20,10 +20,10 @@ class RiskFactorChartsAppRabat(QMainWindow):
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
 
-        self.figures = []  # Liste pour stocker les figures à exporter
+        self.figures = []  
         
-        self.create_tabs()  # Créer les onglets
-        self.add_export_button()  # Ajouter le bouton d'exportation en PDF à la fin
+        self.create_tabs() 
+        self.add_export_button() 
 
     def create_tabs(self):
         factors = {
@@ -83,7 +83,7 @@ class RiskFactorChartsAppRabat(QMainWindow):
                 text.set_fontsize(10)
 
         canvas = FigureCanvas(fig)
-        self.figures.append(fig)  # Ajouter la figure à la liste pour l'exportation
+        self.figures.append(fig)  
         return canvas
 
     def add_export_button(self):
@@ -108,5 +108,5 @@ class RiskFactorChartsAppRabat(QMainWindow):
                 pdf.savefig(fig)
         print(f"PDF sauvegardé sur le bureau : {pdf_path}")
 
-        # Ouvrir automatiquement le fichier PDF
+       
         os.startfile(pdf_path)

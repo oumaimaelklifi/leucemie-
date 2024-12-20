@@ -7,6 +7,7 @@ from PyQt5.QtCore import Qt
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_pdf import PdfPages
 import matplotlib.pyplot as plt
+
 # Charger les données
 file_path = 'Data/Patients_data_souss_massa.xlsx'
 data = pd.read_excel(file_path)
