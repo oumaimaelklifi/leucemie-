@@ -68,9 +68,10 @@ class MainWindow(QMainWindow):
         buttons = [
             ("Accueil", self.show_page_accueil),
             ("Maps", self.show_page_maps),
-            ("Statistiques", self.show_page_statistiques),
+            ("Visualisation graphique", self.show_page_statistiques),
             ("Ressources", self.show_page_ressources),
             ("Contact", self.show_page_contact),
+            
         
         ]
 
@@ -81,7 +82,7 @@ class MainWindow(QMainWindow):
             nav_bar.addWidget(btn)
             self.buttons.append(btn)
 
-        # Afficher la page d'accueil par défaut
+       
         self.show_page_accueil()
 
     

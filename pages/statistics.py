@@ -22,7 +22,7 @@ class DiagrammesFacteursRisque(QMainWindow):
         self.filtre_layout.addWidget(self.zone_label)
 
         self.zone_combobox = QComboBox()
-        self.zone_combobox.addItems(["Rabat", "Casablanca", "Region Sous Massa","Fes Meknes"])
+        self.zone_combobox.addItems(["Rabat", "Casablanca", "Region Sous Massa","Fes Meknes","Etude comparative"])
         self.zone_combobox.currentTextChanged.connect(self.appliquer_filtre)
         self.filtre_layout.addWidget(self.zone_combobox)
 
@@ -44,7 +44,9 @@ class DiagrammesFacteursRisque(QMainWindow):
             "Rabat": RiskFactorChartsAppRabat,
             "Casablanca": RiskFactorChartsAppCasa,
             "Region Sous Massa": RiskFactorChartsAppSoussMassa,
-            "Fes Meknes" :DiagramAppFesMeknes
+            "Fes Meknes" :DiagramAppFesMeknes,
+            "Etude comparative" :DiagramAppFesMeknes,
+            
         }
 
         # Sélectionner "Rabat" par défaut dans la combobox et afficher les diagrammes associés
