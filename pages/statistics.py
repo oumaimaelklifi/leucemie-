@@ -5,6 +5,7 @@ from pages.SoussMassa import RiskFactorChartsAppSoussMassa
 from pages.Rabat import RiskFactorChartsAppRabat
 from pages.Casa import RiskFactorChartsAppCasa
 from pages.FesMeknes import DiagramAppFesMeknes
+from pages.comparaison import Comparaison
 
 class DiagrammesFacteursRisque(QMainWindow):
     def __init__(self):
@@ -45,7 +46,7 @@ class DiagrammesFacteursRisque(QMainWindow):
             "Casablanca": RiskFactorChartsAppCasa,
             "Region Sous Massa": RiskFactorChartsAppSoussMassa,
             "Fes Meknes" :DiagramAppFesMeknes,
-            "Etude comparative" :DiagramAppFesMeknes,
+            "Etude comparative" :Comparaison,
             
         }
 

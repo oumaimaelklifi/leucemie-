@@ -295,12 +295,6 @@ class PageMaps(QWidget):
         print(f"Carte interactive du Maroc créée : ouvre '{map_html_path}' dans ton navigateur.")
 
 
-# Code pour lancer l'application PyQt5
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = PageMaps()
-    window.show()
-    sys.exit(app.exec_())
 
 
 

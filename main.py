@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Leucémie")
         self.setGeometry(100, 100, 800, 600)
 
-        # Conteneur principal
+       
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
         main_layout = QVBoxLayout()

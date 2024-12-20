@@ -6,38 +6,38 @@ from PyQt5.QtGui import QFont, QPixmap, QIcon
 from PyQt5.QtCore import Qt
 import sys
 from fpdf import FPDF
+import shutil
 
 
 class MainWindow1(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        # Define window properties
+        # Définir les propriétés de la fenêtre
         self.setWindowTitle("Application Santé")
         self.setGeometry(100, 100, 1366, 768)
 
-        # Set the main widget
+        # Définir le widget principal
         self.setCentralWidget(self.create_resources_tab())
 
     def create_resources_tab(self):
-        """Creates the resources tab with improved aesthetics."""
+        """Crée l'onglet des ressources avec une meilleure esthétique."""
         resources_widget = QWidget()
         layout = QVBoxLayout()
 
-        # Title
+        # Titre
         title = QLabel("Ressources Informatives sur la Leucémie")
         title.setFont(QFont("Arial", 15, QFont.Bold))
         title.setAlignment(Qt.AlignCenter)
         layout.addWidget(title)
 
-     
         grid_layout = QGridLayout()
         grid_layout.setSpacing(17)  
 
-        # Add sections to the grid
+        # Ajouter des sections au grid
         grid_layout.addWidget(self.create_section(
             "Causes",
-            "La leucémie peut être causée par des facteurs génétiques, une exposition à des radiations, des substances chimiques toxiques (comme le benzène), ou des mutations dans les cellules sanguines.",
+            "La leucémie peut être causée par des facteurs génétiques, une exposition à des radiations, des substances chimiques toxiques (comme le benzène).",
             "assets/3.png"
         ), 0, 0)
 
@@ -56,7 +56,7 @@ class MainWindow1(QMainWindow):
         grid_layout.addWidget(self.create_section(
             "Centres de traitement",
             "- CHU Ibn Sina à Rabat\n- CHU Mohammed VI à Marrakech\n- CHU Hassan II à Fès\n- Hôpital Sheikh Khalifa à Casablanca.",
-            "assets/5.png"
+            "assets/6.png"
         ), 1, 1)
 
         grid_layout.addWidget(self.create_section(
@@ -65,23 +65,20 @@ class MainWindow1(QMainWindow):
             "assets/1 (2).png"
         ), 2, 0, 1, 2)
 
-      
         layout.addLayout(grid_layout)
 
-       
         button_layout = QHBoxLayout()
         button_layout.setSpacing(20)
         button_layout.setAlignment(Qt.AlignCenter)
 
         link_button = QPushButton("En savoir plus")
-        link_button.setIcon(QIcon("C:\\Users\\ADMIN\\Desktop\\images\\info.png"))
-        link_button.setStyleSheet("background-color: #3a3a74; color: white; padding: 10px; border-radius: 5px;")
+        link_button.setStyleSheet("background-color: #3a3a74; color: white; padding: 10px; border-radius: 5px; font-weight:700")
         link_button.clicked.connect(lambda: self.open_link("https://www.sante.gov.ma"))
         button_layout.addWidget(link_button)
 
+        # Bouton pour télécharger le PDF
         pdf_button = QPushButton("Télécharger les informations en PDF")
-        pdf_button.setIcon(QIcon("C:\\Users\\ADMIN\\Desktop\\images\\download.png"))
-        pdf_button.setStyleSheet("background-color: #3a3a74; color: white; padding: 10px; border-radius: 5px;")
+        pdf_button.setStyleSheet("background-color: #3a3a74; color: white; padding: 10px; border-radius: 5px;font-weight:700")
         pdf_button.clicked.connect(self.download_pdf)
         button_layout.addWidget(pdf_button)
 
@@ -91,9 +88,9 @@ class MainWindow1(QMainWindow):
         return resources_widget
 
     def create_section(self, title, content, icon_path):
-        """Creates a visually enhanced section with a title, content, and image."""
+        """Crée une section visuellement améliorée avec un titre, du contenu et une image."""
         section_widget = QWidget()
-        section_layout = QVBoxLayout() 
+        section_layout = QVBoxLayout()
 
         # Image
         image_label = QLabel()
@@ -102,7 +99,7 @@ class MainWindow1(QMainWindow):
         image_label.setAlignment(Qt.AlignCenter)
         section_layout.addWidget(image_label)
 
-        # Text
+        # Texte
         text_label = QLabel(f"<b>{title} :</b><br>{content}")
         text_label.setFont(QFont("Arial", 12))
         text_label.setWordWrap(True)
@@ -115,35 +112,23 @@ class MainWindow1(QMainWindow):
         return section_widget
 
     def open_link(self, url):
-        """Opens an external web link."""
+        """Ouvre un lien web externe."""
         import webbrowser
         webbrowser.open(url)
 
     def download_pdf(self):
-        """Downloads a PDF file with the leukemia information."""
-        pdf = FPDF()
-        pdf.add_page()
-        pdf.set_font("Arial", size=12)
-        pdf.cell(200, 10, txt="Informations sur la Leucémie au Maroc", ln=True, align="C")
-        pdf.ln(10)
+        """Télécharge un fichier PDF existant avec les informations de leucémie."""
+       
+        pdf_path = "Data/informations.pdf" 
 
-        sections = [
-            ("Causes", "La leucémie peut être causée par des facteurs génétiques, une exposition à des radiations, des substances chimiques toxiques."),
-            ("Symptômes", "Fatigue persistante, fièvre, infections fréquentes, perte de poids inexpliquée, douleurs osseuses."),
-            ("Traitements", "Chimiothérapie, radiothérapie, thérapies ciblées, greffe de moelle osseuse."),
-            ("Centres de traitement", "CHU Ibn Sina, CHU Mohammed VI, CHU Hassan II, Hôpital Sheikh Khalifa."),
-            ("Initiatives gouvernementales", "Programmes de dépistage gratuits, aide RAMED pour les patients.")
-        ]
+        # Ouvrir une boîte de dialogue pour choisir l'emplacement de sauvegarde
+        file_path, _ = QFileDialog.getSaveFileName(self, "Sauvegarder le PDF", "informations.pdf", "PDF Files (*.pdf)")
 
-        for title, content in sections:
-            pdf.set_font("Arial", style="B", size=12)
-            pdf.cell(0, 10, txt=title, ln=True)
-            pdf.set_font("Arial", size=12)
-            pdf.multi_cell(0, 10, txt=content)
-            pdf.ln(5)
-
-        file_path, _ = QFileDialog.getSaveFileName(self, "Sauvegarder le PDF", "", "PDF Files (*.pdf)")
+        # Si un emplacement de fichier est choisi
         if file_path:
-            pdf.output(file_path)
-
+            try:
+                # Copier le fichier PDF existant vers l'emplacement choisi
+                shutil.copy(pdf_path, file_path)
+            except Exception as e:
+                print(f"Erreur lors de la copie du fichier PDF: {e}")
 
