@@ -260,22 +260,34 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
 
         with PdfPages(pdf_path) as pdf:
             # Add Title Page
-            fig, ax = plt.subplots(figsize=(8.27, 11.69))  # A4 size
-            ax.text(0.5, 0.8, "Rapport Analyse des Facteurs de Risque", ha='center', fontsize=20, fontweight='bold')
-            ax.text(0.5, 0.6, "Région : Souss Massa", ha='center', fontsize=16)
-           
-           
+
+            fig, ax = plt.subplots(figsize=(8.27, 11.69))  
+
+            # Titre principal
+            ax.text(0.5, 0.9, "Rapport Analyse des Facteurs de Risque", ha='center', fontsize=20, fontweight='bold')
+
+            # Informations supplémentaires
+            ax.text(0.5, 0.8, "Région : Souss Massa", ha='center', fontsize=16)
+            ax.text(0.5, 0.75, "Année : 2014-2019", ha='center', fontsize=16)
+            ax.text(0.5, 0.7, "Population : 1000 patients", ha='center', fontsize=16)
+
+            # Texte descriptif long
+            description = (
+                "Dans la région du Souss Massa, nous avons mené une étude épidémiologique rétrospective descriptive, "
+                "quantitative et analytique de plus de 40 cancers sur une période de 5,5 ans entre janvier 2014 et "
+                "le premier semestre 2019."
+            )
+            ax.text(0.5, 0.6, description, ha='center', fontsize=14, wrap=True)
+
             ax.axis('off')
             pdf.savefig(fig)
             plt.close(fig)
 
-
-
             factors_explanations = {
                 "Sexe": "Le sexe peut influencer la prévalence de certains types de leucémie.",
                 "Groupe d'âge": "L'âge est un facteur de risque clé pour divers types de leucémie.",
-                "Type de leucémie": "Différents types de leucémie affectent des populations distinctes.",
-                "Tabagisme": "Le tabagisme est un facteur de risque connu pour plusieurs maladies, y compris les cancers."
+                "Year": "Analyser les années permet d'identifier les tendances temporelles..",
+                "Profession": "La profession peut être un indicateur de certains risques spécifiques.",
             }
 
             for fig, (factor, explanation) in zip(self.figures, factors_explanations.items()):
@@ -284,8 +296,8 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
                 fig.savefig(image_path, format='png', bbox_inches='tight', dpi=300)  # Augmenter la résolution à 300 dpi
 
                 # Créer une nouvelle figure combinée
-                combined_fig, axs = plt.subplots(2, 1, figsize=(8.27, 11.69))  # Taille A4, deux sous-graphes
-                axs[0].axis('off')  # Zone pour le texte explicatif
+                combined_fig, axs = plt.subplots(2, 1, figsize=(8.27, 11.69))  
+                axs[0].axis('off')  
                 axs[0].text(
                     0.5, 0.5, explanation, fontsize=14, wrap=True, ha='center', va='center',
                     bbox=dict(boxstyle="round,pad=0.3", edgecolor="black", facecolor="#f0f0f0")
