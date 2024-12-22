@@ -49,11 +49,11 @@ class PageAccueil(QWidget):
         nav_layout.setContentsMargins(00, 20, 20, 20)
 
         nav_buttons = [
-            ("CANCER TODAY", "#ffa500"),
-            ("CANCER OVER TIME", "#007bff"),
-            ("CANCER TOMORROW", "#007bff"),
-            ("CANCER CAUSES", "#ff66b2"),
-            ("CANCER SURVIVAL", "#ff66b2"),
+            ("CANCER AUJOURD'HUI", "#ffa500"),
+            ("CANCER À TRAVERS LE TEMP", "#007bff"),
+            ("CANCER DEMAIN", "#007bff"),
+            ("CAUSES DU CANCER", "#ff66b2"),
+            ("SURVIE AU CANCER", "#ff66b2"),
             ("CANCER @CSU", "#b8d9ff"),
         ]
 

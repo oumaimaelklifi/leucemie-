@@ -16,7 +16,6 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle("Leucémie")
         self.setGeometry(100, 100, 800, 600)
-
        
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
@@ -72,7 +71,6 @@ class MainWindow(QMainWindow):
             ("Ressources", self.show_page_ressources),
             ("Contact", self.show_page_contact),
             
-        
         ]
 
         for label, callback in buttons:
@@ -94,7 +92,6 @@ class MainWindow(QMainWindow):
 
     def show_page_statistiques(self):
         self.change_page(self.page_statistiques, self.buttons[2])
-
 
     def show_page_ressources(self):
         self.change_page(self.page_ressources, self.buttons[3])
