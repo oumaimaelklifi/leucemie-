@@ -231,89 +231,77 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
         container.setLayout(layout)
         self.tabs.addTab(container, "Exporter")
 
-    def export_to_pdf(self):
-        desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
-        pdf_path = os.path.join(desktop_path, "SoussMassa.pdf")
-
-        with PdfPages(pdf_path) as pdf:
-            for fig in self.figures:
-                pdf.savefig(fig)
-            print(f"PDF sauvegardé sur le bureau : {pdf_path}")
-
-        os.startfile(pdf_path)
-
-
-    def add_export_button(self):
-        export_button = QPushButton("Exporter les graphiques en PDF")
-        export_button.setFont(QFont("Arial", 14))
-        export_button.clicked.connect(self.export_to_pdf)
-
-        layout = QVBoxLayout()
-        layout.addWidget(export_button)
-        container = QWidget()
-        container.setLayout(layout)
-        self.tabs.addTab(container, "Exporter")
-
-    def export_to_pdf(self):
+    def export_to_pdf(self, event=None):
         desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
         pdf_path = os.path.join(desktop_path, "SoussMassa_Rapport.pdf")
 
         with PdfPages(pdf_path) as pdf:
-            # Add Title Page
+            # Première page : Page de garde
+            fig, ax = plt.subplots(figsize=(8.5, 11))
+            ax.axis("off")  # Cacher les axes
 
-            fig, ax = plt.subplots(figsize=(8.27, 11.69))  
+            # Contenu de la page de garde
+            title = "Rapport sur la leucémie\nRégion Souss Massa\n(Janvier 2014 - Juin 2019)"
+            subtitle = "Une étude épidémiologique rétrospective descriptive, quantitative et analytique."
+            footer = "Région Souss Massa - Ministère de la Santé - Juin 2019"
 
-            # Titre principal
-            ax.text(0.5, 0.9, "Rapport Analyse des Facteurs de Risque", ha='center', fontsize=20, fontweight='bold')
+            # Ajouter des éléments au design
+            ax.text(0.5, 0.85, title, fontsize=20, fontweight="bold", ha="center", color="#003366")
+            ax.text(0.5, 0.8, subtitle, fontsize=12, ha="center", style="italic", color="#555555")
+            ax.text(0.5, 0.15, footer, fontsize=10, ha="center", color="#777777")
 
-            # Informations supplémentaires
-            ax.text(0.5, 0.8, "Région : Souss Massa", ha='center', fontsize=16)
-            ax.text(0.5, 0.75, "Année : 2014-2019", ha='center', fontsize=16)
-            ax.text(0.5, 0.7, "Population : 1000 patients", ha='center', fontsize=16)
+            # Ajouter un rectangle pour le style
+            ax.add_patch(plt.Rectangle((0.2, 0.2), 0.6, 0.01, color="#003366"))
+            ax.add_patch(plt.Rectangle((0.2, 0.18), 0.6, 0.01, color="#cccccc"))
 
-            # Texte descriptif long
-            description = (
-                "Dans la région du Souss Massa, nous avons mené une étude épidémiologique rétrospective descriptive, "
-                "quantitative et analytique de plus de 40 cancers sur une période de 5,5 ans entre janvier 2014 et "
-                "le premier semestre 2019."
-            )
-            ax.text(0.5, 0.6, description, ha='center', fontsize=14, wrap=True)
-
-            ax.axis('off')
             pdf.savefig(fig)
             plt.close(fig)
 
-            factors_explanations = {
-                "Sexe": "Le sexe peut influencer la prévalence de certains types de leucémie.",
-                "Groupe d'âge": "L'âge est un facteur de risque clé pour divers types de leucémie.",
-                "Year": "Analyser les années permet d'identifier les tendances temporelles..",
-                "Profession": "La profession peut être un indicateur de certains risques spécifiques.",
-            }
+          
 
-            for fig, (factor, explanation) in zip(self.figures, factors_explanations.items()):
-                # Sauvegarder le graphique temporairement en tant qu'image avec une meilleure résolution
-                image_path = os.path.join(desktop_path, f"{factor}.png")
-                fig.savefig(image_path, format='png', bbox_inches='tight', dpi=300)  # Augmenter la résolution à 300 dpi
+            # Ajouter une page supplémentaire pour le contenu structuré
+            fig, ax = plt.subplots(figsize=(8.5, 11))
+            ax.axis("off")  # Cacher les axes
 
-                # Créer une nouvelle figure combinée
-                combined_fig, axs = plt.subplots(2, 1, figsize=(8.27, 11.69))  
-                axs[0].axis('off')  
-                axs[0].text(
-                    0.5, 0.5, explanation, fontsize=14, wrap=True, ha='center', va='center',
-                    bbox=dict(boxstyle="round,pad=0.3", edgecolor="black", facecolor="#f0f0f0")
-                )
+            # Contenu structuré
+            content = [
+                "### Introduction :",
+                "Dans la région du Souss Massa, une étude épidémiologique rétrospective a été menée entre janvier 2014 et juin 2019.",
+                "",
+                "### Paramètres étudiés :",
+                "- Sexe, âge, état civil, origine (ville).",
+                "- Environnement (urbain/rural), profession.",
+                "- Mode de paiement, localisation et types de cancer.",
+                "",
+                "### Incidence et facteurs de risque :",
+                "- Incidence : *146,35/100 000 habitants*.",
+                "- Prédominance féminine : *179,15/100 000 (p<0,0001)*.",
+                "- Facteurs de risque principaux : sexe, âge, profession, et environnement.",
+                "",
+                "### Profil des patients :",
+                "- 74% sont mariés.",
+                "- 98% sans profession.",
+                "- Répartition géographique : *54% urbains, **46% ruraux*.",
+            ]
 
-                # Charger l'image sauvegardée et l'afficher
-                img = plt.imread(image_path)
-                axs[1].imshow(img, aspect='auto')
-                axs[1].axis('off')
+            # Ajout du contenu structuré
+            y = 0.9
+            for line in content:
+                ax.text(0.1, y, line, fontsize=11, wrap=True, ha="left", color="#333333")
+                y -= 0.05
 
-                # Sauvegarder la page combinée dans le PDF
-                pdf.savefig(combined_fig)
-                plt.close(combined_fig)
+            pdf.savefig(fig)
+              
+            for fig in self.figures:
+                pdf.savefig(fig)
+            plt.close(fig)
 
-                # Supprimer l'image temporaire
-                os.remove(image_path)
-
-        print(f"PDF sauvegardé sur le bureau : {pdf_path}")
         os.startfile(pdf_path)
+
+
+
+if __name__ == "__main__":
+    app = QApplication([])
+    window = RiskFactorChartsAppSoussMassa()
+    window.show()
+    app.exec_()

@@ -122,45 +122,84 @@ class RiskFactorChartsAppCasa(QMainWindow):
         main_widget.setLayout(main_layout)
         self.setCentralWidget(main_widget)
 
-    def export_to_pdf(self):
-        # Détecter le bureau de l'utilisateur
+    def export_to_pdf(self, event=None):
         desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
-        pdf_path = os.path.join(desktop_path, "Rapport_Casa.pdf")
+        pdf_path = os.path.join(desktop_path, "Casablanca_Rapport.pdf")
 
-        # Générer le fichier PDF
         with PdfPages(pdf_path) as pdf:
-            # Ajouter une page de titre
-            fig, ax = plt.subplots(figsize=(8.27, 11.69))  
-            ax.axis('off')
+            # Première page : Page de garde
+            fig, ax = plt.subplots(figsize=(8.5, 11))
+            ax.axis("off")  # Cacher les axes
 
-            title = "Rapport de la ville de Casablanca"
-            subtitle = "Nombre de population affectée par la leucémie : 1000 patients"
-            risk_factors = (
-                "Facteurs de risque principaux :\n\n"
-                "- Répartition par sexe : Femme/Homme\n\n"
-                "- Groupes d'âge : Les âges les plus touchés.\n\n"
-            )
+            # Contenu de la page de garde
+            title = "Rapport sur la leucémie\n ville de Casablanca\n\n "
+            subtitle = "\n\n\n\n\n\n\n\nNombre de population affectée par la leucémie : 1000 patients\n Une étude épidémiologique rétrospective descriptive, quantitative et analytique\nLes études menées au Maroc sur les facteurs de risque liés à la leucémie ont révélé plusieurs\n éléments importants."
+          
+            footer = "Casablanca - Ministère de la Santé "
 
-            ax.text(0.5, 0.85, title, fontsize=24, fontweight='bold', ha='center')
-            ax.text(0.5, 0.75, subtitle, fontsize=16, ha='center', fontweight='bold')
-            ax.text(0.2, 0.6, risk_factors, fontsize=16, va='top')
+            # Ajouter des éléments au design
+            ax.text(0.5, 0.85, title, fontsize=20, fontweight="bold", ha="center", color="#003366")
+            ax.text(0.5, 0.8, subtitle, fontsize=12, ha="center", style="italic", color="#555555")
+            ax.text(0.5, 0.15, footer, fontsize=10, ha="center", color="#777777")
+
+            # Ajouter un rectangle pour le style
+            ax.add_patch(plt.Rectangle((0.2, 0.2), 0.6, 0.01, color="#003366"))
+            ax.add_patch(plt.Rectangle((0.2, 0.18), 0.6, 0.01, color="#cccccc"))
 
             pdf.savefig(fig)
             plt.close(fig)
 
-            # Ajouter les diagrammes avec explications sur la même page
-            factors_explanations = {
-                "Sexe": "Le sexe peut influencer la susceptibilité à certains types de leucémie.",
-                "Âge": "L'âge est un facteur déterminant pour évaluer le risque de leucémie.",
-                "Environnement": "L'environnement peut jouer un rôle dans l'exposition aux facteurs de risque.",
-                "Type de leucémie": "Différents types de leucémie affectent des groupes spécifiques.",
-                "Tabagisme": "Le tabagisme est un facteur de risque important pour plusieurs cancers, y compris la leucémie.",
-                "Génétique": "Les prédispositions génétiques augmentent le risque de développer une leucémie."
-            }
+          
 
-            for fig, (factor, explanation) in zip(self.figures, factors_explanations.items()):
+            # Ajouter une page supplémentaire pour le contenu structuré
+            fig, ax = plt.subplots(figsize=(8.5, 11))
+            ax.axis("off")  # Cacher les axes
+
+        
+               
+
+             # Contenu structuré
+            content = [
+                "### Introduction :",
+                "Études sur les facteurs de risque liés à la leucémie au Maroc",
+                "",
+                "Les études menées au Maroc sur les facteurs de risque liés à la leucémie ont révélé plusieurs éléments importants. Les facteurs suivants sont fréquemment cités :",
+                "- Sexe, âge, état civil, origine (ville).",
+                "- Environnement (urbain/rural), profession.",
+                "- Mode de paiement, localisation et types de cancer.",
+                "",
+                "### Tabagisme :",
+                "- Le tabagisme actif et passif a été identifié comme un facteur de risque significatif",
+                "dans plusieurs études, augmentant le risque de divers cancers, y compris la leucémie..",
+               
+                "",
+                "### Impact environnemental:",
+                "- La majorité de la population citadine (91,6 %)\nest plus exposée que les ruraux (8,4 %) ",
+               
+                "",
+            ]
+
+            # Ajout du contenu structuré
+            y = 0.9
+            for line in content:
+                ax.text(0.1, y, line, fontsize=11, wrap=True, ha="left", color="#333333")
+                y -= 0.05
+
+
+            # Assurez-vous que l'espacement est suffisant pour ne pas trop surcharger la page
+
+
+            pdf.savefig(fig)
+              
+            for fig in self.figures:
                 pdf.savefig(fig)
+            plt.close(fig)
 
-        print(f"PDF sauvegardé sur le bureau : {pdf_path}")
         os.startfile(pdf_path)
 
+    
+if __name__ == "__main__":
+    app = QApplication([])
+    window = RiskFactorChartsAppCasa()
+    window.show()
+    app.exec_()

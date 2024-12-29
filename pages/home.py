@@ -80,3 +80,4 @@ class PageAccueil(QWidget):
         footer.setFixedHeight(50)
         layout_principal.addWidget(footer)
 
+
