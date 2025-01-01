@@ -19,10 +19,10 @@ class RiskFactorChartsAppCasa(QMainWindow):
         self.setWindowTitle("Analyse des facteurs de risque de leucémie")
 
         self.tabs = QTabWidget()
-        self.figures = []  # Liste pour stocker les graphiques
+        self.figures = []  
 
         self.create_tabs()  # Créer les onglets
-        self.add_export_button_to_main_window()  # Ajouter le bouton d'exportation
+        self.add_export_button_to_main_window()  
 
     def create_tabs(self):
         factors = {
@@ -127,11 +127,11 @@ class RiskFactorChartsAppCasa(QMainWindow):
         pdf_path = os.path.join(desktop_path, "Casablanca_Rapport.pdf")
 
         with PdfPages(pdf_path) as pdf:
-            # Première page : Page de garde
+         
             fig, ax = plt.subplots(figsize=(8.5, 11))
-            ax.axis("off")  # Cacher les axes
+            ax.axis("off")  
 
-            # Contenu de la page de garde
+           
             title = "Rapport sur la leucémie\n ville de Casablanca\n\n "
             subtitle = "\n\n\n\n\n\n\n\nNombre de population affectée par la leucémie : 1000 patients\n Une étude épidémiologique rétrospective descriptive, quantitative et analytique\nLes études menées au Maroc sur les facteurs de risque liés à la leucémie ont révélé plusieurs\n éléments importants."
           
@@ -149,16 +149,14 @@ class RiskFactorChartsAppCasa(QMainWindow):
             pdf.savefig(fig)
             plt.close(fig)
 
-          
-
-            # Ajouter une page supplémentaire pour le contenu structuré
+         
             fig, ax = plt.subplots(figsize=(8.5, 11))
-            ax.axis("off")  # Cacher les axes
+            ax.axis("off") 
 
         
                
 
-             # Contenu structuré
+           
             content = [
                 "### Introduction :",
                 "Études sur les facteurs de risque liés à la leucémie au Maroc",
@@ -179,14 +177,13 @@ class RiskFactorChartsAppCasa(QMainWindow):
                 "",
             ]
 
-            # Ajout du contenu structuré
+        
             y = 0.9
             for line in content:
                 ax.text(0.1, y, line, fontsize=11, wrap=True, ha="left", color="#333333")
                 y -= 0.05
 
 
-            # Assurez-vous que l'espacement est suffisant pour ne pas trop surcharger la page
 
 
             pdf.savefig(fig)

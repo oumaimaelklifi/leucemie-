@@ -15,7 +15,6 @@ class DiagrammesFacteursRisque(QMainWindow):
         self.setCentralWidget(self.central_widget)
         self.main_layout = QVBoxLayout(self.central_widget)
 
-        # Barre de filtres
         self.filtre_layout = QHBoxLayout()
         self.main_layout.addLayout(self.filtre_layout)
 
@@ -35,12 +34,10 @@ class DiagrammesFacteursRisque(QMainWindow):
         self.scroll_layout = QVBoxLayout(self.scroll_content)
         self.scroll_content.setLayout(self.scroll_layout)
         self.scroll_area.setWidget(self.scroll_content)
-
-        # Onglets pour les diagrammes
         self.tabs = QTabWidget()
         self.scroll_layout.addWidget(self.tabs)
 
-        # Dictionnaire associant chaque ville à sa classe de contenu
+     
         self.villes = {
             "Rabat": RiskFactorChartsAppRabat,
             "Casablanca": RiskFactorChartsAppCasa,
@@ -50,16 +47,16 @@ class DiagrammesFacteursRisque(QMainWindow):
             
         }
 
-        # Sélectionner "Rabat" par défaut dans la combobox et afficher les diagrammes associés
+      
         self.zone_combobox.setCurrentText("Rabat")
         self.appliquer_filtre("Rabat")
 
     def appliquer_filtre(self, zone):
-        # Effacer le contenu actuel
+   
         for i in range(self.tabs.count()):
             self.tabs.removeTab(0)
 
-        # Obtenir le contenu de la ville choisie
+    
         ville_class = self.villes.get(zone)
         if ville_class:
             ville_content = ville_class()

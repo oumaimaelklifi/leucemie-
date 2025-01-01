@@ -12,12 +12,9 @@ import shutil
 class MainWindow1(QMainWindow):
     def __init__(self):
         super().__init__()
-
-        # Définir les propriétés de la fenêtre
-        self.setWindowTitle("Application Santé")
+        
         self.setGeometry(100, 100, 1366, 768)
 
-        # Définir le widget principal
         self.setCentralWidget(self.create_resources_tab())
 
     def create_resources_tab(self):
@@ -25,7 +22,7 @@ class MainWindow1(QMainWindow):
         resources_widget = QWidget()
         layout = QVBoxLayout()
 
-        # Titre
+   
         title = QLabel("Ressources Informatives sur la Leucémie")
         title.setFont(QFont("Arial", 15, QFont.Bold))
         title.setAlignment(Qt.AlignCenter)
@@ -34,7 +31,7 @@ class MainWindow1(QMainWindow):
         grid_layout = QGridLayout()
         grid_layout.setSpacing(17)  
 
-        # Ajouter des sections au grid
+      
         grid_layout.addWidget(self.create_section(
             "Causes",
             "La leucémie peut être causée par des facteurs génétiques, une exposition à des radiations, des substances chimiques toxiques (comme le benzène).",
@@ -76,7 +73,7 @@ class MainWindow1(QMainWindow):
         link_button.clicked.connect(lambda: self.open_link("https://www.sante.gov.ma"))
         button_layout.addWidget(link_button)
 
-        # Bouton pour télécharger le PDF
+     
         pdf_button = QPushButton("Télécharger les informations en PDF")
         pdf_button.setStyleSheet("background-color: #3a3a74; color: white; padding: 10px; border-radius: 5px;font-weight:700")
         pdf_button.clicked.connect(self.download_pdf)
@@ -121,13 +118,13 @@ class MainWindow1(QMainWindow):
        
         pdf_path = "Data/informations.pdf" 
 
-        # Ouvrir une boîte de dialogue pour choisir l'emplacement de sauvegarde
+    
         file_path, _ = QFileDialog.getSaveFileName(self, "Sauvegarder le PDF", "informations.pdf", "PDF Files (*.pdf)")
 
-        # Si un emplacement de fichier est choisi
+ 
         if file_path:
             try:
-                # Copier le fichier PDF existant vers l'emplacement choisi
+              
                 shutil.copy(pdf_path, file_path)
             except Exception as e:
                 print(f"Erreur lors de la copie du fichier PDF: {e}")

@@ -43,17 +43,15 @@ class PageContact(QWidget):
 
         layout_principal.addLayout(layout_contact)
 
-        # Espace entre les informations de contact et le message
+
         spacer = QSpacerItem(7, 4)
         layout_principal.addItem(spacer)
 
-        # Laisser un message
+
         label_message = QLabel("Laissez-nous un message :")
         label_message.setAlignment(Qt.AlignCenter)
         label_message.setStyleSheet("font-family: Poppins; font-size: 26px; font-weight: bold; color: #8B0000;font-weight:900")
         layout_principal.addWidget(label_message)
-
-        # Créer un layout vertical pour centrer les éléments (champ de texte et bouton sur des lignes séparées)
         layout_message = QVBoxLayout()
         layout_message.setAlignment(Qt.AlignCenter)
 
@@ -64,11 +62,9 @@ class PageContact(QWidget):
         entry_message.setFontFamily("Poppins")
         layout_message.addWidget(entry_message)
 
-        # Ajouter un espace entre le champ de texte et le bouton
         spacer_message = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Expanding)
         layout_message.addItem(spacer_message)
 
-        # Créer un QHBoxLayout pour centrer le bouton
         layout_bouton = QHBoxLayout()
         layout_bouton.setAlignment(Qt.AlignCenter) 
 
@@ -78,13 +74,13 @@ class PageContact(QWidget):
         
         layout_bouton.addWidget(bouton_envoyer)
 
-        # Ajouter le layout du bouton dans le layout principal
+    
         layout_message.addLayout(layout_bouton)
 
-        # Ajouter le layout vertical (contenant le message et le bouton) dans le layout principal
+     
         layout_principal.addLayout(layout_message)
 
-        # Ajouter un espace en bas de la page
+      
         spacer2 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Expanding)
         layout_principal.addItem(spacer2)
 

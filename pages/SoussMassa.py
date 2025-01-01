@@ -26,8 +26,8 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
 
-        self.selected_provenance = None  # Provenance sélectionnée
-        self.figures = []  # Stockage des figures pour exportation
+        self.selected_provenance = None 
+        self.figures = []  
         self.create_tabs()
         self.add_export_button()
 
@@ -53,7 +53,7 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
         filter_layout.addWidget(self.provenance_selector)
         layout.addLayout(filter_layout)
 
-        # Conteneur pour les graphiques
+     
         self.chart_container = QVBoxLayout()
         layout.addLayout(self.chart_container)
         
@@ -66,10 +66,9 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
 
         self.main_tab.setLayout(layout)
 
-        # Mettre à jour les graphiques au démarrage avec toutes les provenances
+       
         self.update_charts()
 
-        # Créer des onglets statiques pour chaque facteur
         factors = {
             "Sex": "Le sexe est un facteur clé qui peut influencer les risques de santé.",
             "Age": "L'âge est un facteur important dans les analyses épidémiologiques.",
@@ -114,7 +113,7 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
             if widget_to_remove is not None:
                 widget_to_remove.setParent(None)
 
-        # Filtrer les données selon la provenance sélectionnée
+     
         self.selected_provenance = self.provenance_selector.currentText()
         if self.selected_provenance != "Toutes les provenances":
             filtered_data = data[data["Provenance"] == self.selected_provenance]
@@ -124,7 +123,7 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
         pie_charts_layout = QHBoxLayout()
         bar_charts_layout = QHBoxLayout()
 
-        # Ajouter des graphiques
+        
         factors_circle = ["Sex", "Environment"]
         factors_bar = ["Marital Status", "Support Mode"]
 
@@ -141,13 +140,13 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
         self.chart_container.addLayout(pie_charts_layout)
         self.chart_container.addLayout(bar_charts_layout)
 
-        # Générer une phrase globale pour la provenance choisie
+       
         if self.selected_provenance == "Toutes les provenances":
             general_explanation = "Les graphiques montrent la distribution globale des facteurs de risque pour toutes les provenances."
         else:
             general_explanation = f"Les graphiques montrent des tendances spécifiques pour la ville {self.selected_provenance}."
 
-        # Ajouter la phrase explicative
+       
         self.explanation_label.setText(general_explanation)
 
     def create_chart(self, factor, dataset):
@@ -189,7 +188,7 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
         labels = data_counts.index.tolist()
         sizes = data_counts.values
 
-        fig, ax = plt.subplots(figsize=(4, 3))  # Taille réduite des graphiques
+        fig, ax = plt.subplots(figsize=(4, 3))  
         wedges, texts, autotexts = ax.pie(
             sizes, labels=labels, autopct="%1.1f%%", startangle=90,
             colors=["#1f77b4", "#d62728"]
@@ -204,7 +203,7 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
         categories = data_counts.index.tolist()
         values = data_counts.values
 
-        fig, ax = plt.subplots(figsize=(5, 3))  # Taille réduite des graphiques
+        fig, ax = plt.subplots(figsize=(5, 3)) 
         ax.bar(categories, values, color=["#1f77b4", "#d62728"][:len(categories)])
         ax.set_title(f"Répartition par {factor}", fontsize=12)
         ax.set_ylabel("Nombre de patients")
@@ -213,12 +212,6 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
         canvas = FigureCanvas(fig)
         return canvas
 
-
-    #def create_pie_chart(self, filtered_data, factor):
-     #   return self.create_chart(factor, filtered_data)
-
-    #def create_bar_chart(self, filtered_data, factor):
-     #   return self.create_chart(factor, filtered_data)
 
     def add_export_button(self):
         export_button = QPushButton("Exporter les graphiques en PDF")
@@ -238,8 +231,7 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
         with PdfPages(pdf_path) as pdf:
             # Première page : Page de garde
             fig, ax = plt.subplots(figsize=(8.5, 11))
-            ax.axis("off")  # Cacher les axes
-
+            ax.axis("off")  
             # Contenu de la page de garde
             title = "Rapport sur la leucémie\nRégion Souss Massa\n(Janvier 2014 - Juin 2019)"
             subtitle = "Une étude épidémiologique rétrospective descriptive, quantitative et analytique."
@@ -258,12 +250,10 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
             plt.close(fig)
 
           
-
-            # Ajouter une page supplémentaire pour le contenu structuré
             fig, ax = plt.subplots(figsize=(8.5, 11))
-            ax.axis("off")  # Cacher les axes
+            ax.axis("off")  
 
-            # Contenu structuré
+            
             content = [
                 "### Introduction :",
                 "Dans la région du Souss Massa, une étude épidémiologique rétrospective a été menée entre janvier 2014 et juin 2019.",
@@ -284,7 +274,7 @@ class RiskFactorChartsAppSoussMassa(QMainWindow):
                 "- Répartition géographique : *54% urbains, **46% ruraux*.",
             ]
 
-            # Ajout du contenu structuré
+         
             y = 0.9
             for line in content:
                 ax.text(0.1, y, line, fontsize=11, wrap=True, ha="left", color="#333333")

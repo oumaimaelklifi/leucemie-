@@ -6,17 +6,17 @@ class PageAccueil(QWidget):
     def __init__(self, parent=None):
         super(PageAccueil, self).__init__(parent)
 
-        # Layout principal vertical
+        
         layout_principal = QVBoxLayout()
         layout_principal.setContentsMargins(20, 20, 20, 20)  
         layout_principal.setSpacing(20)
         self.setLayout(layout_principal)
 
-        # Layout pour le contenu principal
+    
         layout_contenu = QHBoxLayout()
         layout_contenu.setAlignment(Qt.AlignCenter)  
 
-        # Texte d'introduction
+      
         texte = QLabel(
             "La leucémie est un type de cancer qui affecte le sang et la moelle osseuse, où sont produits les cellules sanguines. "
             "Elle se caractérise par une production anormale et incontrôlée de globules blancs immatures ou anormaux, appelés blastes. "
@@ -27,7 +27,7 @@ class PageAccueil(QWidget):
         texte.setStyleSheet("font-family: Poppins; font-size: 25px; color: #333; font-weight:600;")
         layout_contenu.addWidget(texte)
 
-        # Affichage de l'image
+      
         try:
             image = QLabel()
             pixmap = QPixmap("assets/1.png")
@@ -36,14 +36,10 @@ class PageAccueil(QWidget):
         except Exception as e:
             layout_contenu.addWidget(QLabel("Image non trouvée."))
 
-        # Ajouter le contenu principal au layout principal
         layout_principal.addLayout(layout_contenu)
-
-        # Ajouter un espace entre le contenu et la barre de navigation
         spacer1 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Expanding)
         layout_principal.addItem(spacer1)
 
-        # Navigation bar
         nav_layout = QHBoxLayout()
         nav_layout.setSpacing(10)
         nav_layout.setContentsMargins(00, 20, 20, 20)

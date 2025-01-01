@@ -24,7 +24,7 @@ class MainWindow(QMainWindow):
         main_layout.setContentsMargins(0, 0, 0, 0) 
         self.central_widget.setLayout(main_layout)
 
-        # Barre de logo
+      
         logo_bar = QVBoxLayout()
         logo_label = QLabel("Leucémie au Maroc")
         logo_label.setStyleSheet("font-family: Poppins; font-size: 29px; font-weight: bold; color: white;")
@@ -35,7 +35,7 @@ class MainWindow(QMainWindow):
         logo_bar.addWidget(logo_label)
         main_layout.addWidget(logo_bar_widget)
 
-        # Barre de navigation
+  
         nav_bar = QHBoxLayout()
         nav_widget = QWidget()
         nav_widget.setStyleSheet("background-color: #3a3a74;")
@@ -46,7 +46,7 @@ class MainWindow(QMainWindow):
         self.pages = QStackedWidget()
         main_layout.addWidget(self.pages)
 
-        # Ajouter les pages au QStackedWidget
+       
         self.page_accueil = PageAccueil()
         self.page_maps = PageMaps()
         self.page_statistiques = DiagrammesFacteursRisque()
@@ -59,11 +59,11 @@ class MainWindow(QMainWindow):
         self.pages.addWidget(self.page_contact)
         self.pages.addWidget(self.page_ressources)
 
-        # Boutons de navigation
+     
         self.buttons = []
         self.active_button = None
 
-        # Configuration des boutons
+      
         buttons = [
             ("Accueil", self.show_page_accueil),
             ("Maps", self.show_page_maps),
